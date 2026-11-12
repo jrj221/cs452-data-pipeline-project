@@ -1,0 +1,4009 @@
+{
+  "variable": "temperature",
+  "max_age_hours": 3,
+  "generated": "2026-11-11T18:36:56+00:00",
+  "stations": [
+    {
+      "id": "ABGUT",
+      "name": "Airbag - Utah Olympic Park",
+      "lat": 40.7105,
+      "lon": -111.5613
+    },
+    {
+      "id": "ACRU1",
+      "name": "AGUA CANYON",
+      "lat": 37.5222,
+      "lon": -112.2711
+    },
+    {
+      "id": "AGD",
+      "name": "ALTA - GUARD HOUSE",
+      "lat": 40.5905,
+      "lon": -111.638
+    },
+    {
+      "id": "AGUU1",
+      "name": "AGUA CANYON",
+      "lat": 37.5222,
+      "lon": -112.2712
+    },
+    {
+      "id": "ALKU1",
+      "name": "ALKALI MESA",
+      "lat": 37.6746,
+      "lon": -109.3643
+    },
+    {
+      "id": "ALT",
+      "name": "ALTA - TOP OF COLLINS",
+      "lat": 40.571,
+      "lon": -111.631
+    },
+    {
+      "id": "AMB",
+      "name": "ALTA - MT BALDY",
+      "lat": 40.5677,
+      "lon": -111.6374
+    },
+    {
+      "id": "AR551",
+      "name": "KG7EW Mendon",
+      "lat": 41.7143,
+      "lon": -111.975
+    },
+    {
+      "id": "AR623",
+      "name": "NG7M Syracuse",
+      "lat": 41.0788,
+      "lon": -112.068
+    },
+    {
+      "id": "AS230",
+      "name": "K7PB Salt Lake City",
+      "lat": 40.7305,
+      "lon": -111.8268
+    },
+    {
+      "id": "ASYU1",
+      "name": "ASSAY",
+      "lat": 37.5478,
+      "lon": -112.5652
+    },
+    {
+      "id": "AT097",
+      "name": "KN7D Kaysville",
+      "lat": 41.0438,
+      "lon": -111.9353
+    },
+    {
+      "id": "AT481",
+      "name": "N1VL Lehi",
+      "lat": 40.408,
+      "lon": -111.8945
+    },
+    {
+      "id": "AT693",
+      "name": "KC7VZS Herriman",
+      "lat": 40.5258,
+      "lon": -111.9237
+    },
+    {
+      "id": "AT921",
+      "name": "W7CBM Salt Lake City",
+      "lat": 40.6532,
+      "lon": -111.8548
+    },
+    {
+      "id": "ATRU1",
+      "name": "ATWATER",
+      "lat": 40.59,
+      "lon": -111.64
+    },
+    {
+      "id": "AU011",
+      "name": "K7UV Brigham City",
+      "lat": 41.509,
+      "lon": -112.0207
+    },
+    {
+      "id": "AU183",
+      "name": "KF7K Orem",
+      "lat": 40.2642,
+      "lon": -111.6767
+    },
+    {
+      "id": "AU316",
+      "name": "KB0OLA Layton",
+      "lat": 41.081,
+      "lon": -111.9682
+    },
+    {
+      "id": "AU561",
+      "name": "KB7STN Herriman",
+      "lat": 40.491,
+      "lon": -112.0272
+    },
+    {
+      "id": "AU639",
+      "name": "KE7YUP Eagle Mountain",
+      "lat": 40.39,
+      "lon": -111.9847
+    },
+    {
+      "id": "AV383",
+      "name": "AF7DW North Ogden",
+      "lat": 41.3223,
+      "lon": -111.9505
+    },
+    {
+      "id": "AW070",
+      "name": "K7LDN-13 RIVERTON",
+      "lat": 40.5102,
+      "lon": -111.9692
+    },
+    {
+      "id": "AW249",
+      "name": "KK7NDB HEBER CITY",
+      "lat": 40.524,
+      "lon": -111.4015
+    },
+    {
+      "id": "AW396",
+      "name": "KJ7IVE-13 HOOPER",
+      "lat": 41.1528,
+      "lon": -112.0877
+    },
+    {
+      "id": "AW403",
+      "name": "N7BDR WEST VALLEY",
+      "lat": 40.6895,
+      "lon": -112.0048
+    },
+    {
+      "id": "AW803",
+      "name": "K1RFS SOUTH JORDAN",
+      "lat": 40.541,
+      "lon": -112.0347
+    },
+    {
+      "id": "AX586",
+      "name": "K9DUD CEDAR CITY",
+      "lat": 37.597,
+      "lon": -113.45
+    },
+    {
+      "id": "AX675",
+      "name": "KM7GAN-13 MURRAY",
+      "lat": 40.6527,
+      "lon": -111.885
+    },
+    {
+      "id": "BCRU1",
+      "name": "BRYSON CANYON",
+      "lat": 39.2788,
+      "lon": -109.2212
+    },
+    {
+      "id": "BERU1",
+      "name": "BEAR RIVER AT UTAH-WYOMING STATE LINE NEAR COALVILLE 30E",
+      "lat": 40.9653,
+      "lon": -110.8528
+    },
+    {
+      "id": "BFTU1",
+      "name": "BLACK FLAT-U.M. CK",
+      "lat": 38.6799,
+      "lon": -111.5977
+    },
+    {
+      "id": "BGFU1",
+      "name": "BIG FLAT",
+      "lat": 38.3018,
+      "lon": -112.3567
+    },
+    {
+      "id": "BHAU1",
+      "name": "USCRN SITE NEAR BRIGHAM CITY 28WNW",
+      "lat": 41.6164,
+      "lon": -112.5467
+    },
+    {
+      "id": "BHCU1",
+      "name": "Brian Head 2S",
+      "lat": 37.663,
+      "lon": -112.8376
+    },
+    {
+      "id": "BIVU1",
+      "name": "BIG INDIAN VALLEY",
+      "lat": 38.2246,
+      "lon": -109.2787
+    },
+    {
+      "id": "BLKU1",
+      "name": "BLACKS FORK COMMISSARY NEAR COALVILLE 43E",
+      "lat": 40.9608,
+      "lon": -110.5794
+    },
+    {
+      "id": "BLPU1",
+      "name": "BEN LOMOND PEAK",
+      "lat": 41.376,
+      "lon": -111.9441
+    },
+    {
+      "id": "BLTU1",
+      "name": "BEN LOMOND TRAIL",
+      "lat": 41.3829,
+      "lon": -111.921
+    },
+    {
+      "id": "BRC",
+      "name": "BRIGHTON CREST",
+      "lat": 40.5872,
+      "lon": -111.5773
+    },
+    {
+      "id": "BRHU1",
+      "name": "BRIAN HEAD",
+      "lat": 37.6799,
+      "lon": -112.8567
+    },
+    {
+      "id": "BRIU1",
+      "name": "BRIGHTON",
+      "lat": 40.5994,
+      "lon": -111.5817
+    },
+    {
+      "id": "BRPU1",
+      "name": "BRUIN POINT",
+      "lat": 39.6093,
+      "lon": -110.29
+    },
+    {
+      "id": "BRW",
+      "name": "BRIGHTON GREAT WESTERN",
+      "lat": 40.5923,
+      "lon": -111.5616
+    },
+    {
+      "id": "BSAU1",
+      "name": "FRANCE CANYON BURN SCAR",
+      "lat": 37.5883,
+      "lon": -112.3475
+    },
+    {
+      "id": "BSEU1",
+      "name": "MONROE CANYON",
+      "lat": 38.5581,
+      "lon": -112.0911
+    },
+    {
+      "id": "BSFU1",
+      "name": "COTTONWOOD BS BEAVER CO",
+      "lat": 38.2117,
+      "lon": -112.4339
+    },
+    {
+      "id": "BSHU1",
+      "name": "EAST FORK BURN SCAR",
+      "lat": 40.5069,
+      "lon": -110.5883
+    },
+    {
+      "id": "BSJU1",
+      "name": "SILVER KING BURN SCAR",
+      "lat": 38.4667,
+      "lon": -112.3492
+    },
+    {
+      "id": "BSTU1",
+      "name": "BRIMSTONE RESERVOIR",
+      "lat": 38.3073,
+      "lon": -113.3862
+    },
+    {
+      "id": "BUFU1",
+      "name": "BUCK FLAT",
+      "lat": 39.134,
+      "lon": -111.4372
+    },
+    {
+      "id": "BUKU1",
+      "name": "BUCK FLAT",
+      "lat": 37.9034,
+      "lon": -111.6924
+    },
+    {
+      "id": "BVDU1",
+      "name": "BEAVER DAMS",
+      "lat": 39.1368,
+      "lon": -111.5581
+    },
+    {
+      "id": "BXCU1",
+      "name": "BOX CREEK",
+      "lat": 38.5081,
+      "lon": -112.0186
+    },
+    {
+      "id": "BYCU1",
+      "name": "BRYCE CANYON",
+      "lat": 37.6417,
+      "lon": -112.1722
+    },
+    {
+      "id": "C2399",
+      "name": "CW2399 Spring City",
+      "lat": 39.4847,
+      "lon": -111.4937
+    },
+    {
+      "id": "C3996",
+      "name": "CW3996 Oak City",
+      "lat": 39.3722,
+      "lon": -112.3338
+    },
+    {
+      "id": "C4143",
+      "name": "CW4143 Alpine 3W",
+      "lat": 40.4637,
+      "lon": -111.8279
+    },
+    {
+      "id": "C4541",
+      "name": "CW4541 Monticello",
+      "lat": 38.0078,
+      "lon": -109.1833
+    },
+    {
+      "id": "C5210",
+      "name": "CW5210 Farmington",
+      "lat": 40.9872,
+      "lon": -111.9287
+    },
+    {
+      "id": "C7410",
+      "name": "CW7410 Syracuse",
+      "lat": 41.0678,
+      "lon": -112.0405
+    },
+    {
+      "id": "C8427",
+      "name": "CW8427 Harrisville 1411",
+      "lat": 41.2633,
+      "lon": -111.9805
+    },
+    {
+      "id": "C8428",
+      "name": "CW8428 Morgan 1426",
+      "lat": 41.0467,
+      "lon": -111.682
+    },
+    {
+      "id": "C8430",
+      "name": "CW8430 Randolph 1437A",
+      "lat": 41.7,
+      "lon": -111.2
+    },
+    {
+      "id": "C8632",
+      "name": "CW8632 Riverside 1433",
+      "lat": 41.7872,
+      "lon": -112.1647
+    },
+    {
+      "id": "C8633",
+      "name": "CW8633 Richmond 1436A",
+      "lat": 41.9403,
+      "lon": -111.8133
+    },
+    {
+      "id": "C8635",
+      "name": "CW8635 Clearfield 1424",
+      "lat": 41.1047,
+      "lon": -111.9888
+    },
+    {
+      "id": "C8721",
+      "name": "CW8721 West Valley City",
+      "lat": 40.6993,
+      "lon": -112.0245
+    },
+    {
+      "id": "C8842",
+      "name": "CW8842 Sardine Summit 1448        UT US",
+      "lat": 41.55,
+      "lon": -111.9533
+    },
+    {
+      "id": "C8844",
+      "name": "CW8844 Huntsville 1425",
+      "lat": 41.26,
+      "lon": -111.7112
+    },
+    {
+      "id": "C8845",
+      "name": "CW8845 Snowville 1431",
+      "lat": 41.9642,
+      "lon": -112.7087
+    },
+    {
+      "id": "C8846",
+      "name": "CW8846 Park Valley 1431A          UT US",
+      "lat": 41.8158,
+      "lon": -113.3333
+    },
+    {
+      "id": "C8847",
+      "name": "CW8847 Bothwell 1432",
+      "lat": 41.722,
+      "lon": -112.2278
+    },
+    {
+      "id": "C8914",
+      "name": "CW8914 Logan Summit 1445          UT US",
+      "lat": 41.9537,
+      "lon": -111.492
+    },
+    {
+      "id": "C8916",
+      "name": "CW8916 Wellsville 1435",
+      "lat": 41.6158,
+      "lon": -111.9325
+    },
+    {
+      "id": "C8917",
+      "name": "CW8917 Logan 1436",
+      "lat": 41.7353,
+      "lon": -111.8553
+    },
+    {
+      "id": "C8946",
+      "name": "CW8946 Clinton 1421",
+      "lat": 41.1478,
+      "lon": -112.1153
+    },
+    {
+      "id": "C8947",
+      "name": "CW8947 Ogden 1422",
+      "lat": 41.24,
+      "lon": -111.9805
+    },
+    {
+      "id": "C8948",
+      "name": "CW8948 Centerville 1427",
+      "lat": 40.9312,
+      "lon": -111.8963
+    },
+    {
+      "id": "C9315",
+      "name": "CW9315 West Haven",
+      "lat": 41.1855,
+      "lon": -112.1007
+    },
+    {
+      "id": "C9350",
+      "name": "CW9350 Ogden",
+      "lat": 41.5743,
+      "lon": -112.0322
+    },
+    {
+      "id": "C9635",
+      "name": "CW9635 Salt Lake City",
+      "lat": 40.3553,
+      "lon": -111.5485
+    },
+    {
+      "id": "CAOU1",
+      "name": "CORRAL",
+      "lat": 39.6579,
+      "lon": -110.3791
+    },
+    {
+      "id": "CAVU1",
+      "name": "CAVE VALLEY",
+      "lat": 37.3552,
+      "lon": -113.1234
+    },
+    {
+      "id": "CCKU1",
+      "name": "CHALK CREEK #2",
+      "lat": 40.8853,
+      "lon": -111.0695
+    },
+    {
+      "id": "CCRU1",
+      "name": "CART CREEK",
+      "lat": 40.8847,
+      "lon": -109.4169
+    },
+    {
+      "id": "CEN",
+      "name": "Centerville",
+      "lat": 40.9497,
+      "lon": -111.8916
+    },
+    {
+      "id": "CENU1",
+      "name": "KFO PORTABLE 3",
+      "lat": 37.1389,
+      "lon": -112.4478
+    },
+    {
+      "id": "CHCU1",
+      "name": "CHALK CREEK #1",
+      "lat": 40.8546,
+      "lon": -111.0477
+    },
+    {
+      "id": "CHPU1",
+      "name": "CHEPETA",
+      "lat": 40.8103,
+      "lon": -110.0733
+    },
+    {
+      "id": "CJSU1",
+      "name": "CAMP JACKSON",
+      "lat": 37.8133,
+      "lon": -109.4872
+    },
+    {
+      "id": "CLCU1",
+      "name": "CLEAR CREEK #1",
+      "lat": 39.8667,
+      "lon": -111.2836
+    },
+    {
+      "id": "CLFU1",
+      "name": "CLIFTON FLAT",
+      "lat": 40.1124,
+      "lon": -113.8764
+    },
+    {
+      "id": "CLN",
+      "name": "ALTA - COLLINS",
+      "lat": 40.5763,
+      "lon": -111.6383
+    },
+    {
+      "id": "CLRU1",
+      "name": "COLORADO RIVER NEAR CISCO 11S",
+      "lat": 38.8106,
+      "lon": -109.2928
+    },
+    {
+      "id": "CLZU1",
+      "name": "CIRCLEVILLE",
+      "lat": 38.1511,
+      "lon": -112.2515
+    },
+    {
+      "id": "COH",
+      "name": "Court H",
+      "lat": 40.5288,
+      "lon": -112.2978
+    },
+    {
+      "id": "CRDUT",
+      "name": "Card Canyon",
+      "lat": 41.7313,
+      "lon": -111.6834
+    },
+    {
+      "id": "CRKU1",
+      "name": "CLEAR CREEK #2",
+      "lat": 39.8927,
+      "lon": -111.2515
+    },
+    {
+      "id": "CRN",
+      "name": "CAPITOL REEF NP",
+      "lat": 38.2898,
+      "lon": -111.2619
+    },
+    {
+      "id": "CSC",
+      "name": "Cascade Peak",
+      "lat": 40.3126,
+      "lon": -111.5887
+    },
+    {
+      "id": "CUCU1",
+      "name": "CURRANT CREEK",
+      "lat": 40.3575,
+      "lon": -111.0899
+    },
+    {
+      "id": "CVYU1",
+      "name": "CASTLE VALLEY",
+      "lat": 37.661,
+      "lon": -112.7409
+    },
+    {
+      "id": "CWHU1",
+      "name": "CHEPETA",
+      "lat": 40.7746,
+      "lon": -110.0105
+    },
+    {
+      "id": "D0231",
+      "name": "DW0231 Holladay",
+      "lat": 40.6658,
+      "lon": -111.8113
+    },
+    {
+      "id": "D2649",
+      "name": "DW2649 Clearfield 1.7 WSW         UT US",
+      "lat": 41.0969,
+      "lon": -112.0532
+    },
+    {
+      "id": "D4219",
+      "name": "DW4219 Enterprise",
+      "lat": 37.5717,
+      "lon": -113.7115
+    },
+    {
+      "id": "D4988",
+      "name": "DW4988 Taylorsville",
+      "lat": 40.6467,
+      "lon": -111.9793
+    },
+    {
+      "id": "D5026",
+      "name": "DW5026 Holladay",
+      "lat": 40.6592,
+      "lon": -111.838
+    },
+    {
+      "id": "D5508",
+      "name": "DW5508 Kearns",
+      "lat": 40.646,
+      "lon": -111.9845
+    },
+    {
+      "id": "D6120",
+      "name": "DW6120 Sandy",
+      "lat": 40.552,
+      "lon": -111.8033
+    },
+    {
+      "id": "D6494",
+      "name": "DW6494 Lehi",
+      "lat": 40.4307,
+      "lon": -111.8435
+    },
+    {
+      "id": "D9435",
+      "name": "DW9435 Draper",
+      "lat": 40.4822,
+      "lon": -111.8793
+    },
+    {
+      "id": "DBPU1",
+      "name": "DRY BREAD POND",
+      "lat": 41.4129,
+      "lon": -111.5377
+    },
+    {
+      "id": "DCC",
+      "name": "Deer Creek Dam",
+      "lat": 40.4015,
+      "lon": -111.5206
+    },
+    {
+      "id": "DCPU1",
+      "name": "DILL'S CAMP",
+      "lat": 39.0455,
+      "lon": -111.4688
+    },
+    {
+      "id": "DIAU1",
+      "name": "DIAMOND RIM",
+      "lat": 40.6172,
+      "lon": -109.2428
+    },
+    {
+      "id": "DMOU1",
+      "name": "Diamond Fork above Red Hollow near Thistle 7NNE",
+      "lat": 40.0761,
+      "lon": -111.3825
+    },
+    {
+      "id": "DPG01",
+      "name": "DITTO",
+      "lat": 40.1838,
+      "lon": -112.9217
+    },
+    {
+      "id": "DPG02",
+      "name": "CALLAO GATE",
+      "lat": 40.0461,
+      "lon": -113.2081
+    },
+    {
+      "id": "DPG04",
+      "name": "TARGET S",
+      "lat": 40.046,
+      "lon": -113.0455
+    },
+    {
+      "id": "DPG05",
+      "name": "WHITE SAGE",
+      "lat": 40.1569,
+      "lon": -112.8937
+    },
+    {
+      "id": "DPG06",
+      "name": "CAMEL BACK MTN",
+      "lat": 40.1195,
+      "lon": -112.9543
+    },
+    {
+      "id": "DPG07",
+      "name": "ENGLISH VILLAGE",
+      "lat": 40.2269,
+      "lon": -112.7253
+    },
+    {
+      "id": "DPG10",
+      "name": "BAKER LAB",
+      "lat": 40.1817,
+      "lon": -113.0217
+    },
+    {
+      "id": "DPG11",
+      "name": "TOWER GRID",
+      "lat": 40.1035,
+      "lon": -112.9804
+    },
+    {
+      "id": "DPG13",
+      "name": "DURAND ROAD",
+      "lat": 40.1067,
+      "lon": -112.8081
+    },
+    {
+      "id": "DPG14",
+      "name": "WIG MOUNTAIN",
+      "lat": 40.3531,
+      "lon": -113.0764
+    },
+    {
+      "id": "DPG15",
+      "name": "SALT FLATS",
+      "lat": 40.3411,
+      "lon": -113.2353
+    },
+    {
+      "id": "DPG17",
+      "name": "INTERSTATE 80",
+      "lat": 40.7273,
+      "lon": -113.4691
+    },
+    {
+      "id": "DPG18",
+      "name": "CAUSEWAY",
+      "lat": 40.1165,
+      "lon": -113.5334
+    },
+    {
+      "id": "DPG20",
+      "name": "CALLAO",
+      "lat": 39.9455,
+      "lon": -113.7015
+    },
+    {
+      "id": "DPG21",
+      "name": "SIMPSON SPRINGS",
+      "lat": 39.9193,
+      "lon": -112.939
+    },
+    {
+      "id": "DPG23",
+      "name": "LOWER CEDAR MTN",
+      "lat": 40.2784,
+      "lon": -112.9811
+    },
+    {
+      "id": "DPG24",
+      "name": "WEST OF WILDCAT MTN",
+      "lat": 40.4527,
+      "lon": -113.4724
+    },
+    {
+      "id": "DPG26",
+      "name": "WEST SALT FLATS",
+      "lat": 40.2821,
+      "lon": -113.7002
+    },
+    {
+      "id": "DPG28",
+      "name": "Romeo & Centerline",
+      "lat": 40.1475,
+      "lon": -113.1559
+    },
+    {
+      "id": "DPG29",
+      "name": "Target R",
+      "lat": 40.1012,
+      "lon": -113.2208
+    },
+    {
+      "id": "DPG30",
+      "name": "APG",
+      "lat": 40.229,
+      "lon": -113.2174
+    },
+    {
+      "id": "DPG32",
+      "name": "Dugway 32",
+      "lat": 40.2142,
+      "lon": -112.7764
+    },
+    {
+      "id": "DRFU1",
+      "name": "DRY FORK",
+      "lat": 40.5655,
+      "lon": -112.1734
+    },
+    {
+      "id": "DRRD",
+      "name": "Dry Ridge",
+      "lat": 40.5839,
+      "lon": -110.6169
+    },
+    {
+      "id": "DRSU1",
+      "name": "DONKEY RESERVOIR",
+      "lat": 38.2084,
+      "lon": -111.4741
+    },
+    {
+      "id": "DSTU1",
+      "name": "DANIELS-STRAWBERRY",
+      "lat": 40.2953,
+      "lon": -111.2568
+    },
+    {
+      "id": "DVB",
+      "name": "DV - BALD EAGLE",
+      "lat": 40.6236,
+      "lon": -111.4809
+    },
+    {
+      "id": "DVE",
+      "name": "DV - BURNS",
+      "lat": 40.634,
+      "lon": -111.4795
+    },
+    {
+      "id": "E1185",
+      "name": "EW1185 Kaysville",
+      "lat": 41.0242,
+      "lon": -111.9258
+    },
+    {
+      "id": "E2066",
+      "name": "EW2066 Nibley",
+      "lat": 41.6792,
+      "lon": -111.8737
+    },
+    {
+      "id": "E2067",
+      "name": "EW2067 Nibley",
+      "lat": 41.679,
+      "lon": -111.873
+    },
+    {
+      "id": "E2533",
+      "name": "EW2533 Bountiful Bench",
+      "lat": 40.8995,
+      "lon": -111.8515
+    },
+    {
+      "id": "E3712",
+      "name": "EW3712 Vernal",
+      "lat": 40.4555,
+      "lon": -109.6089
+    },
+    {
+      "id": "E3770",
+      "name": "EW3770 South Jordan",
+      "lat": 40.5717,
+      "lon": -111.9617
+    },
+    {
+      "id": "E3808",
+      "name": "EW3808 Heber City",
+      "lat": 40.4612,
+      "lon": -111.2285
+    },
+    {
+      "id": "E4987",
+      "name": "EW4987 Coalville",
+      "lat": 40.8858,
+      "lon": -111.3872
+    },
+    {
+      "id": "E6393",
+      "name": "EW6393 Salt Lake City",
+      "lat": 40.7222,
+      "lon": -111.8171
+    },
+    {
+      "id": "E7309",
+      "name": "EW7309 Fruitland",
+      "lat": 40.1763,
+      "lon": -110.6453
+    },
+    {
+      "id": "E7419",
+      "name": "EW7419 SOUTH JORDAN",
+      "lat": 40.5762,
+      "lon": -111.9834
+    },
+    {
+      "id": "E7948",
+      "name": "EW7948 Green River",
+      "lat": 38.9727,
+      "lon": -110.1468
+    },
+    {
+      "id": "E8702",
+      "name": "EW8702 Eden",
+      "lat": 41.325,
+      "lon": -111.839
+    },
+    {
+      "id": "E9049",
+      "name": "St.George E Ridge",
+      "lat": 37.1112,
+      "lon": -113.5503
+    },
+    {
+      "id": "E9449",
+      "name": "EW9449 Millcreek",
+      "lat": 40.673,
+      "lon": -111.799
+    },
+    {
+      "id": "E9528",
+      "name": "EW9528 Saratoga Springs",
+      "lat": 40.3687,
+      "lon": -111.9298
+    },
+    {
+      "id": "EDGUT",
+      "name": "Needles District Outpost",
+      "lat": 38.1933,
+      "lon": -109.7468
+    },
+    {
+      "id": "EFBU1",
+      "name": "EF BLACKS FORK GS",
+      "lat": 40.8847,
+      "lon": -110.5406
+    },
+    {
+      "id": "ELDU1",
+      "name": "EASTLAND",
+      "lat": 37.7785,
+      "lon": -109.1719
+    },
+    {
+      "id": "ENPU1",
+      "name": "ENTERPRISE",
+      "lat": 37.6334,
+      "lon": -113.6432
+    },
+    {
+      "id": "ENTU1",
+      "name": "ENTERPRISE",
+      "lat": 37.5588,
+      "lon": -113.7174
+    },
+    {
+      "id": "EPMU1",
+      "name": "EPHRAIM",
+      "lat": 39.368,
+      "lon": -111.578
+    },
+    {
+      "id": "EWCU1",
+      "name": "EAST WILLOW CREEK",
+      "lat": 39.3121,
+      "lon": -109.5318
+    },
+    {
+      "id": "F0287",
+      "name": "FW0287 Murray",
+      "lat": 40.6407,
+      "lon": -111.8487
+    },
+    {
+      "id": "F0517",
+      "name": "FW0517 Centerville",
+      "lat": 40.9465,
+      "lon": -111.885
+    },
+    {
+      "id": "F1790",
+      "name": "FW1790 RIVERTON",
+      "lat": 40.5122,
+      "lon": -111.9612
+    },
+    {
+      "id": "F1924",
+      "name": "FW1924 West Jordan",
+      "lat": 40.6292,
+      "lon": -112.0407
+    },
+    {
+      "id": "F2423",
+      "name": "FW2423 Moab",
+      "lat": 38.437,
+      "lon": -109.3555
+    },
+    {
+      "id": "F2865",
+      "name": "FW2865 Park City",
+      "lat": 40.7422,
+      "lon": -111.5688
+    },
+    {
+      "id": "F3671",
+      "name": "FW3671 Draper",
+      "lat": 40.4993,
+      "lon": -111.8437
+    },
+    {
+      "id": "F3937",
+      "name": "FW3937 Salt Lake City",
+      "lat": 40.7713,
+      "lon": -111.8513
+    },
+    {
+      "id": "F5146",
+      "name": "FW5146 Mountain Green",
+      "lat": 41.1455,
+      "lon": -111.7903
+    },
+    {
+      "id": "F5778",
+      "name": "FW5778 West Jordan",
+      "lat": 40.5842,
+      "lon": -111.9937
+    },
+    {
+      "id": "F5881",
+      "name": "FW5881 Oakley",
+      "lat": 40.7203,
+      "lon": -111.2913
+    },
+    {
+      "id": "F5941",
+      "name": "FW5941 South Jordan",
+      "lat": 40.5703,
+      "lon": -111.9645
+    },
+    {
+      "id": "F5963",
+      "name": "FW5963 Syracuse",
+      "lat": 41.0807,
+      "lon": -112.0517
+    },
+    {
+      "id": "F6234",
+      "name": "FW6234 Kanab",
+      "lat": 37.132,
+      "lon": -112.3932
+    },
+    {
+      "id": "F7258",
+      "name": "FW7258 St George",
+      "lat": 37.1292,
+      "lon": -113.6298
+    },
+    {
+      "id": "F8056",
+      "name": "FW8056 Beryl",
+      "lat": 37.8317,
+      "lon": -113.7037
+    },
+    {
+      "id": "F8325",
+      "name": "FW8325 Garden City",
+      "lat": 41.9368,
+      "lon": -111.3889
+    },
+    {
+      "id": "F8379",
+      "name": "FW8379 Park City",
+      "lat": 40.7431,
+      "lon": -111.4848
+    },
+    {
+      "id": "F8688",
+      "name": "FW8688 Lehi",
+      "lat": 40.3997,
+      "lon": -111.8862
+    },
+    {
+      "id": "F9042",
+      "name": "FW9042 South Jordan",
+      "lat": 40.557,
+      "lon": -112.0017
+    },
+    {
+      "id": "F9295",
+      "name": "FW9295 Cedar City",
+      "lat": 37.5708,
+      "lon": -113.2258
+    },
+    {
+      "id": "FARM",
+      "name": "Farmington Bench",
+      "lat": 41.0038,
+      "lon": -111.8911
+    },
+    {
+      "id": "FG006",
+      "name": "Payson",
+      "lat": 40.0257,
+      "lon": -111.7078
+    },
+    {
+      "id": "FG007",
+      "name": "Perry",
+      "lat": 41.4488,
+      "lon": -112.0363
+    },
+    {
+      "id": "FG008",
+      "name": "Pleasant View",
+      "lat": 41.316,
+      "lon": -111.9924
+    },
+    {
+      "id": "FG009",
+      "name": "Santaquin",
+      "lat": 39.9639,
+      "lon": -111.7972
+    },
+    {
+      "id": "FG011",
+      "name": "Tintic",
+      "lat": 39.8735,
+      "lon": -112.129
+    },
+    {
+      "id": "FG015",
+      "name": "Lincoln Point",
+      "lat": 40.1342,
+      "lon": -111.819
+    },
+    {
+      "id": "FG017",
+      "name": "River Heights",
+      "lat": 41.7254,
+      "lon": -111.8063
+    },
+    {
+      "id": "FG018",
+      "name": "Thatcher",
+      "lat": 41.6921,
+      "lon": -112.3029
+    },
+    {
+      "id": "FG023",
+      "name": "West Mountain Center",
+      "lat": 40.0134,
+      "lon": -111.7858
+    },
+    {
+      "id": "FG024",
+      "name": "West Mountain South",
+      "lat": 39.9982,
+      "lon": -111.7983
+    },
+    {
+      "id": "FG026",
+      "name": "Provo Canyon",
+      "lat": 40.3103,
+      "lon": -111.6443
+    },
+    {
+      "id": "FIVU1",
+      "name": "FIVE MILE",
+      "lat": 39.8909,
+      "lon": -110.266
+    },
+    {
+      "id": "FLSU1",
+      "name": "FISH LAKE UTAH",
+      "lat": 38.5046,
+      "lon": -111.7669
+    },
+    {
+      "id": "FPLU1",
+      "name": "FIVE POINTS LAKE",
+      "lat": 40.7178,
+      "lon": -110.4672
+    },
+    {
+      "id": "FPS",
+      "name": "Flight Park South",
+      "lat": 40.4569,
+      "lon": -111.9048
+    },
+    {
+      "id": "FRE",
+      "name": "FREMONT JUNCTION",
+      "lat": 38.7786,
+      "lon": -111.3166
+    },
+    {
+      "id": "FREUT",
+      "name": "Fremont Island - Miller Hill",
+      "lat": 41.1546,
+      "lon": -112.33
+    },
+    {
+      "id": "FRLU1",
+      "name": "FARNSWORTH LAKE",
+      "lat": 38.7725,
+      "lon": -111.6766
+    },
+    {
+      "id": "FSHU1",
+      "name": "FISH LAKE RANGER STATION NEAR KOOSHAREM 10ENE",
+      "lat": 38.5517,
+      "lon": -111.7228
+    },
+    {
+      "id": "FTMU1",
+      "name": "FLATTOP MOUNTAIN",
+      "lat": 39.3361,
+      "lon": -110.6014
+    },
+    {
+      "id": "G0463",
+      "name": "GW0463 Farr West",
+      "lat": 41.292,
+      "lon": -112.0402
+    },
+    {
+      "id": "G2381",
+      "name": "GW2381 Syracuse",
+      "lat": 41.0908,
+      "lon": -112.0482
+    },
+    {
+      "id": "G2863",
+      "name": "GW2863 Herriman",
+      "lat": 40.5153,
+      "lon": -112.0422
+    },
+    {
+      "id": "G3585",
+      "name": "GW3585 IVINS",
+      "lat": 37.1697,
+      "lon": -113.6863
+    },
+    {
+      "id": "G4542",
+      "name": "GW4542 TORREY",
+      "lat": 38.2913,
+      "lon": -111.4127
+    },
+    {
+      "id": "G4809",
+      "name": "GW4809 SYRACUSE",
+      "lat": 41.0613,
+      "lon": -112.0563
+    },
+    {
+      "id": "G4949",
+      "name": "GW4949 SALT LAKE CITY",
+      "lat": 40.697,
+      "lon": -111.8368
+    },
+    {
+      "id": "G5214",
+      "name": "GW5214 NORTH OGDEN",
+      "lat": 41.3257,
+      "lon": -111.971
+    },
+    {
+      "id": "G5229",
+      "name": "GW5229 LINDON",
+      "lat": 40.3332,
+      "lon": -111.7277
+    },
+    {
+      "id": "G5423",
+      "name": "GW5423 PARK CITY",
+      "lat": 40.7053,
+      "lon": -111.5485
+    },
+    {
+      "id": "G5440",
+      "name": "GW5440 LAYTON",
+      "lat": 41.061,
+      "lon": -111.9988
+    },
+    {
+      "id": "G5514",
+      "name": "GW5514 KANAB",
+      "lat": 37.0375,
+      "lon": -112.5247
+    },
+    {
+      "id": "G5564",
+      "name": "GW5564 SOLDIER SUMMIT",
+      "lat": 39.9034,
+      "lon": -111.1145
+    },
+    {
+      "id": "G5805",
+      "name": "GW5805 HARRISVILLE",
+      "lat": 41.2957,
+      "lon": -111.9922
+    },
+    {
+      "id": "G6314",
+      "name": "GW6314 HEBER",
+      "lat": 40.6173,
+      "lon": -111.4212
+    },
+    {
+      "id": "G6325",
+      "name": "GW6325 HARRISVILLE",
+      "lat": 41.2987,
+      "lon": -111.9827
+    },
+    {
+      "id": "G7002",
+      "name": "GW7002 WEST VALLEY CITY",
+      "lat": 40.6762,
+      "lon": -112.0357
+    },
+    {
+      "id": "G7445",
+      "name": "GW7445 GRANTSVILLE",
+      "lat": 40.6125,
+      "lon": -112.4757
+    },
+    {
+      "id": "G7694",
+      "name": "GW7694 PROVO",
+      "lat": 40.2565,
+      "lon": -111.6538
+    },
+    {
+      "id": "G7704",
+      "name": "GW7704 SPRINGVILLE",
+      "lat": 40.175,
+      "lon": -111.5957
+    },
+    {
+      "id": "G7744",
+      "name": "GW7744 WASHINGTON",
+      "lat": 37.1443,
+      "lon": -113.4577
+    },
+    {
+      "id": "G7755",
+      "name": "GW7755 ST GEORGE - DIVARIO        UT US",
+      "lat": 37.0983,
+      "lon": -113.6415
+    },
+    {
+      "id": "G7935",
+      "name": "GW7935 FORT DUCHESNE",
+      "lat": 40.262,
+      "lon": -109.86
+    },
+    {
+      "id": "G8159",
+      "name": "GW8159 PARK CITY",
+      "lat": 40.6013,
+      "lon": -111.487
+    },
+    {
+      "id": "G8160",
+      "name": "GW8160 PARK CITY",
+      "lat": 40.6048,
+      "lon": -111.461
+    },
+    {
+      "id": "GDBU1",
+      "name": "GOLD BASIN",
+      "lat": 38.47,
+      "lon": -109.26
+    },
+    {
+      "id": "GECU1",
+      "name": "GEORGE CREEK",
+      "lat": 41.9156,
+      "lon": -113.4115
+    },
+    {
+      "id": "GOLDB",
+      "name": "Goldbasin",
+      "lat": 38.4653,
+      "lon": -109.2645
+    },
+    {
+      "id": "GOOU1",
+      "name": "GOOSEBERRY RS",
+      "lat": 38.8003,
+      "lon": -111.6833
+    },
+    {
+      "id": "GOUU1",
+      "name": "GOOSEBERRY RS UP",
+      "lat": 38.7882,
+      "lon": -111.6889
+    },
+    {
+      "id": "GREU1",
+      "name": "GREEN RIVER",
+      "lat": 39.0183,
+      "lon": -110.1626
+    },
+    {
+      "id": "GRVU1",
+      "name": "GREEN RIVER AT GREEN RIVER",
+      "lat": 38.9889,
+      "lon": -110.1503
+    },
+    {
+      "id": "GSHU1",
+      "name": "GOSHUTE",
+      "lat": 39.99,
+      "lon": -114.0002
+    },
+    {
+      "id": "GTVU1",
+      "name": "GRANTSVILLE",
+      "lat": 40.5909,
+      "lon": -112.3926
+    },
+    {
+      "id": "GTZU1",
+      "name": "GUTZ PEAK",
+      "lat": 37.4949,
+      "lon": -113.9421
+    },
+    {
+      "id": "HANU1",
+      "name": "HANNA NEAR DUSCHENE 24NW",
+      "lat": 40.4006,
+      "lon": -110.7586
+    },
+    {
+      "id": "HBRU1",
+      "name": "SNAKE CREEK POWER HOUSE NEAR HEBER 5WNW",
+      "lat": 40.5453,
+      "lon": -111.5042
+    },
+    {
+      "id": "HERUT",
+      "name": "Herriman",
+      "lat": 40.4881,
+      "lon": -112.0255
+    },
+    {
+      "id": "HEWU1",
+      "name": "HEWINTA",
+      "lat": 40.9501,
+      "lon": -110.4842
+    },
+    {
+      "id": "HIRU1",
+      "name": "HOLE-IN-ROCK",
+      "lat": 40.9217,
+      "lon": -110.1862
+    },
+    {
+      "id": "HLDU1",
+      "name": "HOLDEN",
+      "lat": 39.1922,
+      "lon": -112.4016
+    },
+    {
+      "id": "HNHU1",
+      "name": "HUNTINGTON HORSE",
+      "lat": 39.6177,
+      "lon": -111.3058
+    },
+    {
+      "id": "HNMU1",
+      "name": "HENRY MTN",
+      "lat": 38.0345,
+      "lon": -110.8251
+    },
+    {
+      "id": "HOBU1",
+      "name": "HOBBLE CREEK",
+      "lat": 40.1854,
+      "lon": -111.3597
+    },
+    {
+      "id": "HOHU1",
+      "name": "HORSE HOLLOW",
+      "lat": 38.6669,
+      "lon": -112.6512
+    },
+    {
+      "id": "HOL",
+      "name": "North Holladay",
+      "lat": 40.6756,
+      "lon": -111.8259
+    },
+    {
+      "id": "HRGU1",
+      "name": "HORSE RIDGE",
+      "lat": 41.3137,
+      "lon": -111.4462
+    },
+    {
+      "id": "HRSU1",
+      "name": "HARRIS FLAT",
+      "lat": 37.49,
+      "lon": -112.576
+    },
+    {
+      "id": "HSRU1",
+      "name": "HORSE RIDGE",
+      "lat": 39.9339,
+      "lon": -110.8619
+    },
+    {
+      "id": "HWAU1",
+      "name": "HEWINTA",
+      "lat": 40.9503,
+      "lon": -110.4842
+    },
+    {
+      "id": "HWYU1",
+      "name": "HARMS WAY",
+      "lat": 38.3135,
+      "lon": -109.24
+    },
+    {
+      "id": "ICYU1",
+      "name": "INDIAN CANYON",
+      "lat": 39.8917,
+      "lon": -110.746
+    },
+    {
+      "id": "JCRU1",
+      "name": "JONES CORRAL",
+      "lat": 38.0712,
+      "lon": -112.1677
+    },
+    {
+      "id": "JESU1",
+      "name": "GREEN RIVER NEAR JENSEN 6ENE",
+      "lat": 40.4094,
+      "lon": -109.2347
+    },
+    {
+      "id": "JSPU1",
+      "name": "JENSEN SPRING",
+      "lat": 38.0343,
+      "lon": -113.5217
+    },
+    {
+      "id": "K41U",
+      "name": "Manti-Ephraim Airport",
+      "lat": 39.3313,
+      "lon": -111.6127
+    },
+    {
+      "id": "KBCE",
+      "name": "Bryce Canyon Airport",
+      "lat": 37.7013,
+      "lon": -112.149
+    },
+    {
+      "id": "KBDG",
+      "name": "Blanding Municipal Airport",
+      "lat": 37.586,
+      "lon": -109.482
+    },
+    {
+      "id": "KBMC",
+      "name": "Brigham City Regional Airport",
+      "lat": 41.5464,
+      "lon": -112.0601
+    },
+    {
+      "id": "KCC02",
+      "name": "Marina",
+      "lat": 40.7343,
+      "lon": -112.2103
+    },
+    {
+      "id": "KCC16",
+      "name": "Code 51",
+      "lat": 40.5498,
+      "lon": -112.1289
+    },
+    {
+      "id": "KCC18",
+      "name": "Galena",
+      "lat": 40.5067,
+      "lon": -112.159
+    },
+    {
+      "id": "KCC22",
+      "name": "Copper Drain",
+      "lat": 40.5153,
+      "lon": -112.1007
+    },
+    {
+      "id": "KCDC",
+      "name": "Cedar City Municipal Airport",
+      "lat": 37.7067,
+      "lon": -113.097
+    },
+    {
+      "id": "KCNY",
+      "name": "Moab, Canyonlands Field",
+      "lat": 38.76,
+      "lon": -109.7447
+    },
+    {
+      "id": "KDNU1",
+      "name": "KLONDIKE NARROWS",
+      "lat": 41.9676,
+      "lon": -111.5975
+    },
+    {
+      "id": "KENV",
+      "name": "Wendover Airport",
+      "lat": 40.7206,
+      "lon": -114.0358
+    },
+    {
+      "id": "KGCU1",
+      "name": "KING'S CABIN",
+      "lat": 40.7163,
+      "lon": -109.544
+    },
+    {
+      "id": "KHCR",
+      "name": "Heber Valley Airport",
+      "lat": 40.4774,
+      "lon": -111.433
+    },
+    {
+      "id": "KHIF",
+      "name": "Hill Air Force Base",
+      "lat": 41.1111,
+      "lon": -111.9623
+    },
+    {
+      "id": "KHVE",
+      "name": "Hanksville",
+      "lat": 38.418,
+      "lon": -110.704
+    },
+    {
+      "id": "KILU1",
+      "name": "KILFOIL CREEK",
+      "lat": 41.2476,
+      "lon": -111.4125
+    },
+    {
+      "id": "KKNB",
+      "name": "KANAB MUNICIPAL AIRPORT",
+      "lat": 37.01,
+      "lon": -112.53
+    },
+    {
+      "id": "KLBU1",
+      "name": "KOLOB",
+      "lat": 37.5264,
+      "lon": -113.0539
+    },
+    {
+      "id": "KLGU",
+      "name": "Logan-Cache Airport",
+      "lat": 41.7865,
+      "lon": -111.8519
+    },
+    {
+      "id": "KMLF",
+      "name": "Milford Municipal Airport",
+      "lat": 38.4225,
+      "lon": -113.0109
+    },
+    {
+      "id": "KOGD",
+      "name": "Ogden-Hinckley Airport",
+      "lat": 41.1941,
+      "lon": -112.0168
+    },
+    {
+      "id": "KPRU1",
+      "name": "KINGS POINT",
+      "lat": 40.8597,
+      "lon": -109.1034
+    },
+    {
+      "id": "KPUC",
+      "name": "Price - Carbon County Regional Airport",
+      "lat": 39.6089,
+      "lon": -110.7555
+    },
+    {
+      "id": "KPVU",
+      "name": "Provo Municipal Airport",
+      "lat": 40.2239,
+      "lon": -111.7253
+    },
+    {
+      "id": "KRIF",
+      "name": "Richfield Municipal Airport",
+      "lat": 38.7341,
+      "lon": -112.1016
+    },
+    {
+      "id": "KSGU",
+      "name": "St George Regional Airport",
+      "lat": 37.0451,
+      "lon": -113.5056
+    },
+    {
+      "id": "KSLC",
+      "name": "Salt Lake City, Salt Lake City International Airport",
+      "lat": 40.7707,
+      "lon": -111.965
+    },
+    {
+      "id": "KU16",
+      "name": "Eagle Range",
+      "lat": 41.0606,
+      "lon": -113.0715
+    },
+    {
+      "id": "KU19",
+      "name": "Granite Peak",
+      "lat": 40.1667,
+      "lon": -113.35
+    },
+    {
+      "id": "KVEL",
+      "name": "Vernal Airport",
+      "lat": 40.443,
+      "lon": -109.5127
+    },
+    {
+      "id": "LARU1",
+      "name": "LARB HOLLOW",
+      "lat": 38.1159,
+      "lon": -111.3208
+    },
+    {
+      "id": "LBNU1",
+      "name": "LAKEFORK BASIN",
+      "lat": 40.7379,
+      "lon": -110.6212
+    },
+    {
+      "id": "LBVU1",
+      "name": "LONESOME BEAVER",
+      "lat": 38.08,
+      "lon": -110.7724
+    },
+    {
+      "id": "LBVUT",
+      "name": "Lisbon Valley",
+      "lat": 38.1491,
+      "lon": -109.1235
+    },
+    {
+      "id": "LGCU1",
+      "name": "LITTLE GRASSY",
+      "lat": 37.4863,
+      "lon": -113.8458
+    },
+    {
+      "id": "LGS",
+      "name": "Logan Summit",
+      "lat": 41.9535,
+      "lon": -111.4919
+    },
+    {
+      "id": "LIGU1",
+      "name": "LIGHTNING RIDGE",
+      "lat": 41.3589,
+      "lon": -111.4875
+    },
+    {
+      "id": "LKFU1",
+      "name": "LAKEFORK #1",
+      "lat": 40.5971,
+      "lon": -110.4332
+    },
+    {
+      "id": "LMLU1",
+      "name": "LASAL MOUNTAIN-LOWER",
+      "lat": 38.4817,
+      "lon": -109.2916
+    },
+    {
+      "id": "LMR",
+      "name": "Lakeside Mountain",
+      "lat": 41.0608,
+      "lon": -112.8917
+    },
+    {
+      "id": "LMS",
+      "name": "Locomotive Springs",
+      "lat": 41.701,
+      "lon": -112.8618
+    },
+    {
+      "id": "LMSU1",
+      "name": "LOUIS MEADOW",
+      "lat": 40.8301,
+      "lon": -111.7639
+    },
+    {
+      "id": "LPRU1",
+      "name": "LAVA POINT RAWS",
+      "lat": 37.3917,
+      "lon": -113.0389
+    },
+    {
+      "id": "LRFU1",
+      "name": "LITTLE RED FOX",
+      "lat": 40.1796,
+      "lon": -110.3046
+    },
+    {
+      "id": "LSCU1",
+      "name": "LOST CREEK",
+      "lat": 38.7804,
+      "lon": -111.8655
+    },
+    {
+      "id": "LSMU1",
+      "name": "LASAL MOUNTAIN",
+      "lat": 38.4823,
+      "lon": -109.272
+    },
+    {
+      "id": "LVJU1",
+      "name": "LONG VALLEY JCT",
+      "lat": 37.4876,
+      "lon": -112.5146
+    },
+    {
+      "id": "MCDU1",
+      "name": "MAMMOTH-COTTONWOOD",
+      "lat": 39.6834,
+      "lon": -111.3182
+    },
+    {
+      "id": "MCKU1",
+      "name": "MCCOOK RIDGE",
+      "lat": 39.6337,
+      "lon": -109.2652
+    },
+    {
+      "id": "MCRU1",
+      "name": "MONTE CRISTO",
+      "lat": 41.4655,
+      "lon": -111.4969
+    },
+    {
+      "id": "MDVU1",
+      "name": "MIDWAY VALLEY",
+      "lat": 37.5693,
+      "lon": -112.8385
+    },
+    {
+      "id": "MDXU1",
+      "name": "MUDDY CREEK NEAR EMERY 4N",
+      "lat": 38.9819,
+      "lon": -111.2486
+    },
+    {
+      "id": "MFKU1",
+      "name": "MINING FORK",
+      "lat": 40.4938,
+      "lon": -112.6114
+    },
+    {
+      "id": "MFRU1",
+      "name": "MILFORD",
+      "lat": 38.342,
+      "lon": -113.0105
+    },
+    {
+      "id": "MHMU1",
+      "name": "MOUNTAIN HOME",
+      "lat": 40.3726,
+      "lon": -110.406
+    },
+    {
+      "id": "MHSUT",
+      "name": "Mill Hollow Snow",
+      "lat": 40.4805,
+      "lon": -111.1026
+    },
+    {
+      "id": "MLDU1",
+      "name": "MILL-D NORTH",
+      "lat": 40.6588,
+      "lon": -111.6368
+    },
+    {
+      "id": "MMTU1",
+      "name": "MOSBY MTN.",
+      "lat": 40.608,
+      "lon": -109.8881
+    },
+    {
+      "id": "MNDU1",
+      "name": "MANDERFIELD",
+      "lat": 38.3665,
+      "lon": -112.6429
+    },
+    {
+      "id": "MNMUT",
+      "name": "Miner's Mountain Warning Weather Station",
+      "lat": 38.1735,
+      "lon": -111.2401
+    },
+    {
+      "id": "MOAB",
+      "name": "USGS/NPS Building - Moab",
+      "lat": 38.5374,
+      "lon": -109.5104
+    },
+    {
+      "id": "MPEU1",
+      "name": "MT PENNELL",
+      "lat": 37.9779,
+      "lon": -110.7933
+    },
+    {
+      "id": "MRGU1",
+      "name": "MORGAN",
+      "lat": 40.9999,
+      "lon": -111.6856
+    },
+    {
+      "id": "MRHU1",
+      "name": "BURTS MILLER RANCH",
+      "lat": 40.9847,
+      "lon": -110.8499
+    },
+    {
+      "id": "MTBU1",
+      "name": "MT BALDY",
+      "lat": 39.1365,
+      "lon": -111.5053
+    },
+    {
+      "id": "MTHU1",
+      "name": "MOON LAKE COOPB NEAR ALTONAH 20NW",
+      "lat": 40.5617,
+      "lon": -110.4922
+    },
+    {
+      "id": "MVYU1",
+      "name": "MERCHANT VALLEY",
+      "lat": 38.3028,
+      "lon": -112.4364
+    },
+    {
+      "id": "NAA",
+      "name": "Neil Armstrong Academy",
+      "lat": 40.7115,
+      "lon": -112.0145
+    },
+    {
+      "id": "NHMU",
+      "name": "Natural History Museum Utah",
+      "lat": 40.7643,
+      "lon": -111.8229
+    },
+    {
+      "id": "NLGUT",
+      "name": "North Logan - Green Canyon",
+      "lat": 41.7655,
+      "lon": -111.7889
+    },
+    {
+      "id": "NLPU1",
+      "name": "NORTH LONG POINT",
+      "lat": 37.8548,
+      "lon": -109.8394
+    },
+    {
+      "id": "NPIU1",
+      "name": "NEPHI",
+      "lat": 39.6455,
+      "lon": -111.8704
+    },
+    {
+      "id": "NWZU1",
+      "name": "BEAVER DIVIDE",
+      "lat": 40.6123,
+      "lon": -111.098
+    },
+    {
+      "id": "OARU1",
+      "name": "OAK CREEK",
+      "lat": 39.3485,
+      "lon": -112.1919
+    },
+    {
+      "id": "OGP",
+      "name": "SNOWBASIN - MOUNT OGDEN",
+      "lat": 41.2,
+      "lon": -111.881
+    },
+    {
+      "id": "OTRU1",
+      "name": "OTTER CREEK",
+      "lat": 41.7531,
+      "lon": -111.2816
+    },
+    {
+      "id": "PACU1",
+      "name": "PARK CITY G.C",
+      "lat": 40.66,
+      "lon": -111.5156
+    },
+    {
+      "id": "PC016",
+      "name": "Cross Hollow (Cedar City)",
+      "lat": 37.646,
+      "lon": -113.1244
+    },
+    {
+      "id": "PC018",
+      "name": "Park City Mountain Resort",
+      "lat": 40.6331,
+      "lon": -111.5112
+    },
+    {
+      "id": "PC021",
+      "name": "Mill Creek Canyon",
+      "lat": 40.6906,
+      "lon": -111.7728
+    },
+    {
+      "id": "PC022",
+      "name": "Mount Aire Canyon",
+      "lat": 40.7404,
+      "lon": -111.7393
+    },
+    {
+      "id": "PC024",
+      "name": "NW Midway",
+      "lat": 40.5488,
+      "lon": -111.5131
+    },
+    {
+      "id": "PC025",
+      "name": "Big Cottonwood",
+      "lat": 40.6343,
+      "lon": -111.7037
+    },
+    {
+      "id": "PC032",
+      "name": "Summit Park",
+      "lat": 40.7515,
+      "lon": -111.6095
+    },
+    {
+      "id": "PC033",
+      "name": "Little Cottonwood",
+      "lat": 40.5718,
+      "lon": -111.7631
+    },
+    {
+      "id": "PC034",
+      "name": "Provo Canyon",
+      "lat": 40.3409,
+      "lon": -111.6045
+    },
+    {
+      "id": "PC054",
+      "name": "Brian Head",
+      "lat": 37.698,
+      "lon": -112.8444
+    },
+    {
+      "id": "PC055",
+      "name": "Red Butte",
+      "lat": 37.4119,
+      "lon": -113.6427
+    },
+    {
+      "id": "PC057",
+      "name": "Wanship",
+      "lat": 40.8491,
+      "lon": -111.399
+    },
+    {
+      "id": "PC058",
+      "name": "Emigration Canyon",
+      "lat": 40.7672,
+      "lon": -111.7672
+    },
+    {
+      "id": "PC059",
+      "name": "Silver Summit",
+      "lat": 40.7627,
+      "lon": -111.492
+    },
+    {
+      "id": "PC062",
+      "name": "Deer Creek - UT",
+      "lat": 40.4008,
+      "lon": -111.539
+    },
+    {
+      "id": "PC063",
+      "name": "Brown's Canyon",
+      "lat": 40.701,
+      "lon": -111.4304
+    },
+    {
+      "id": "PC064",
+      "name": "Albion Basin",
+      "lat": 40.5929,
+      "lon": -111.6244
+    },
+    {
+      "id": "PC065",
+      "name": "Aerie",
+      "lat": 40.6533,
+      "lon": -111.4897
+    },
+    {
+      "id": "PC066",
+      "name": "Porcupine Mountain",
+      "lat": 41.0211,
+      "lon": -111.1171
+    },
+    {
+      "id": "PC067",
+      "name": "Highland",
+      "lat": 40.4489,
+      "lon": -111.8165
+    },
+    {
+      "id": "PC070",
+      "name": "West Cedar",
+      "lat": 37.6519,
+      "lon": -113.1692
+    },
+    {
+      "id": "PC072",
+      "name": "Cedar Highlands",
+      "lat": 37.641,
+      "lon": -113.0637
+    },
+    {
+      "id": "PC091",
+      "name": "Upper Parowan Valley",
+      "lat": 38.0253,
+      "lon": -112.7267
+    },
+    {
+      "id": "PC092",
+      "name": "Kanarraville West",
+      "lat": 37.5311,
+      "lon": -113.224
+    },
+    {
+      "id": "PC094",
+      "name": "Iron Mountain",
+      "lat": 37.6412,
+      "lon": -113.3743
+    },
+    {
+      "id": "PC095",
+      "name": "Old Highway 91",
+      "lat": 37.1009,
+      "lon": -113.8239
+    },
+    {
+      "id": "PC096",
+      "name": "Parowan",
+      "lat": 37.8295,
+      "lon": -112.8394
+    },
+    {
+      "id": "PC097",
+      "name": "Salina Gunnison AP",
+      "lat": 39.028,
+      "lon": -111.8303
+    },
+    {
+      "id": "PC099",
+      "name": "Piute Reservoir",
+      "lat": 38.3445,
+      "lon": -112.2208
+    },
+    {
+      "id": "PC100",
+      "name": "Spring City East",
+      "lat": 39.4923,
+      "lon": -111.4497
+    },
+    {
+      "id": "PC103",
+      "name": "Stockton North",
+      "lat": 40.4666,
+      "lon": -112.3554
+    },
+    {
+      "id": "PC104",
+      "name": "Grantsville South",
+      "lat": 40.5636,
+      "lon": -112.4779
+    },
+    {
+      "id": "PC105",
+      "name": "Upper Avenues",
+      "lat": 40.7793,
+      "lon": -111.8553
+    },
+    {
+      "id": "PC107",
+      "name": "Bonneville Shoreline",
+      "lat": 40.7924,
+      "lon": -111.8704
+    },
+    {
+      "id": "PC112",
+      "name": "Huntsville East",
+      "lat": 41.2611,
+      "lon": -111.7031
+    },
+    {
+      "id": "PC115",
+      "name": "Sardine Summit",
+      "lat": 41.5494,
+      "lon": -111.9531
+    },
+    {
+      "id": "PC121",
+      "name": "Federal Heights",
+      "lat": 40.7759,
+      "lon": -111.8388
+    },
+    {
+      "id": "PC123",
+      "name": "Murray's Hill",
+      "lat": 41.6116,
+      "lon": -111.9522
+    },
+    {
+      "id": "PC124",
+      "name": "Crow Mountain",
+      "lat": 41.872,
+      "lon": -111.8097
+    },
+    {
+      "id": "PC155",
+      "name": "Kenilworth",
+      "lat": 39.6852,
+      "lon": -110.8076
+    },
+    {
+      "id": "PC170",
+      "name": "Panguitch Lake",
+      "lat": 37.7415,
+      "lon": -112.6134
+    },
+    {
+      "id": "PC180",
+      "name": "Blanding East",
+      "lat": 37.6364,
+      "lon": -109.4579
+    },
+    {
+      "id": "PC184",
+      "name": "Vanadium",
+      "lat": 38.0956,
+      "lon": -109.1911
+    },
+    {
+      "id": "PC188",
+      "name": "Hole N The Rock",
+      "lat": 38.3888,
+      "lon": -109.4343
+    },
+    {
+      "id": "PC189",
+      "name": "Moab Southeast",
+      "lat": 38.5394,
+      "lon": -109.473
+    },
+    {
+      "id": "PC195",
+      "name": "Eureka Ridge",
+      "lat": 39.9377,
+      "lon": -112.107
+    },
+    {
+      "id": "PC198",
+      "name": "Iron Cap",
+      "lat": 38.497,
+      "lon": -112.2168
+    },
+    {
+      "id": "PC202",
+      "name": "Richfield West Mountain Rd",
+      "lat": 38.7848,
+      "lon": -112.1824
+    },
+    {
+      "id": "PC203",
+      "name": "Fish Lake NF",
+      "lat": 38.571,
+      "lon": -112.3797
+    },
+    {
+      "id": "PC221",
+      "name": "Lake Mountain",
+      "lat": 40.2752,
+      "lon": -111.9424
+    },
+    {
+      "id": "PC252",
+      "name": "Patmos Ridge",
+      "lat": 39.6382,
+      "lon": -110.3416
+    },
+    {
+      "id": "PC253",
+      "name": "Ford Ridge",
+      "lat": 39.7559,
+      "lon": -110.9918
+    },
+    {
+      "id": "PC254",
+      "name": "The Elbow",
+      "lat": 39.6535,
+      "lon": -111.1296
+    },
+    {
+      "id": "PC255",
+      "name": "Soldier Summit Ridge",
+      "lat": 39.8858,
+      "lon": -111.112
+    },
+    {
+      "id": "PC266",
+      "name": "Little Mountain",
+      "lat": 40.5422,
+      "lon": -109.6996
+    },
+    {
+      "id": "PC294",
+      "name": "Sigurd",
+      "lat": 38.8141,
+      "lon": -111.9508
+    },
+    {
+      "id": "PC295",
+      "name": "Gunnison Ridge",
+      "lat": 39.3213,
+      "lon": -111.7703
+    },
+    {
+      "id": "PC298",
+      "name": "The Head",
+      "lat": 41.1079,
+      "lon": -111.6417
+    },
+    {
+      "id": "PC332",
+      "name": "Cove Fort",
+      "lat": 38.6328,
+      "lon": -112.6163
+    },
+    {
+      "id": "PC336",
+      "name": "Big Mountain",
+      "lat": 37.5112,
+      "lon": -113.6575
+    },
+    {
+      "id": "PC349",
+      "name": "Nephi West",
+      "lat": 39.7255,
+      "lon": -111.9337
+    },
+    {
+      "id": "PC350",
+      "name": "Oak Spring Creek",
+      "lat": 38.7919,
+      "lon": -111.3727
+    },
+    {
+      "id": "PC351",
+      "name": "North Horn",
+      "lat": 39.2135,
+      "lon": -111.1562
+    },
+    {
+      "id": "PC352",
+      "name": "Scofield Reservoir",
+      "lat": 39.7731,
+      "lon": -111.1689
+    },
+    {
+      "id": "PC354",
+      "name": "Samak",
+      "lat": 40.6401,
+      "lon": -111.2625
+    },
+    {
+      "id": "PC356",
+      "name": "Woodland Crest",
+      "lat": 40.5695,
+      "lon": -111.2366
+    },
+    {
+      "id": "PC357",
+      "name": "Clarks Canyon",
+      "lat": 41.0065,
+      "lon": -111.2576
+    },
+    {
+      "id": "PC366",
+      "name": "Branch Creek",
+      "lat": 40.8654,
+      "lon": -111.2524
+    },
+    {
+      "id": "PC404",
+      "name": "Riverside West",
+      "lat": 41.7853,
+      "lon": -112.2308
+    },
+    {
+      "id": "PC409",
+      "name": "MWS UT 5 Big Mountain Pass",
+      "lat": 40.8279,
+      "lon": -111.6537
+    },
+    {
+      "id": "PC465",
+      "name": "Yellow Knolls",
+      "lat": 37.2061,
+      "lon": -113.5831
+    },
+    {
+      "id": "PC467",
+      "name": "Kolob North Creek",
+      "lat": 37.2101,
+      "lon": -113.1771
+    },
+    {
+      "id": "PC469",
+      "name": "Duncan Springs",
+      "lat": 37.588,
+      "lon": -113.3891
+    },
+    {
+      "id": "PC472",
+      "name": "Dry Willow",
+      "lat": 38.0995,
+      "lon": -113.0122
+    },
+    {
+      "id": "PC477",
+      "name": "Palisade Lake",
+      "lat": 39.2001,
+      "lon": -111.675
+    },
+    {
+      "id": "PC478",
+      "name": "Dammeron Valley North",
+      "lat": 37.3286,
+      "lon": -113.6451
+    },
+    {
+      "id": "PC481",
+      "name": "South Mesa",
+      "lat": 38.498,
+      "lon": -109.3295
+    },
+    {
+      "id": "PC482",
+      "name": "Bull Claim Hill",
+      "lat": 38.7378,
+      "lon": -112.0193
+    },
+    {
+      "id": "PC483",
+      "name": "Big Spring Rd",
+      "lat": 39.6405,
+      "lon": -111.6662
+    },
+    {
+      "id": "PC486",
+      "name": "Little Valley",
+      "lat": 40.5678,
+      "lon": -109.4633
+    },
+    {
+      "id": "PC490",
+      "name": "Kennecott Rd Lake Point",
+      "lat": 40.702,
+      "lon": -112.2541
+    },
+    {
+      "id": "PC492",
+      "name": "Radar",
+      "lat": 41.257,
+      "lon": -112.4407
+    },
+    {
+      "id": "PC494",
+      "name": "Jackson Ditch",
+      "lat": 41.5216,
+      "lon": -111.7795
+    },
+    {
+      "id": "PC558",
+      "name": "Ashley",
+      "lat": 40.5093,
+      "lon": -109.5755
+    },
+    {
+      "id": "PC559",
+      "name": "Stokes Canyon",
+      "lat": 41.1755,
+      "lon": -111.4088
+    },
+    {
+      "id": "PC563",
+      "name": "Three Peaks",
+      "lat": 37.7998,
+      "lon": -113.1575
+    },
+    {
+      "id": "PC565",
+      "name": "Beaver Dam Wash",
+      "lat": 37.0916,
+      "lon": -114.0272
+    },
+    {
+      "id": "PC566",
+      "name": "Purgatory Flat",
+      "lat": 37.1501,
+      "lon": -113.4252
+    },
+    {
+      "id": "PC568",
+      "name": "John's Valley",
+      "lat": 37.941,
+      "lon": -112.0026
+    },
+    {
+      "id": "PC593",
+      "name": "Pinto",
+      "lat": 37.8689,
+      "lon": -109.3185
+    },
+    {
+      "id": "PC594",
+      "name": "Montezuma Creek",
+      "lat": 37.4447,
+      "lon": -109.22
+    },
+    {
+      "id": "PC595",
+      "name": "Bluff",
+      "lat": 37.2892,
+      "lon": -109.559
+    },
+    {
+      "id": "PC599",
+      "name": "Crystal Geyser",
+      "lat": 38.9392,
+      "lon": -110.1272
+    },
+    {
+      "id": "PC601",
+      "name": "Moab City",
+      "lat": 38.5769,
+      "lon": -109.5453
+    },
+    {
+      "id": "PC611",
+      "name": "Farmington South",
+      "lat": 40.9558,
+      "lon": -111.8796
+    },
+    {
+      "id": "PC612",
+      "name": "Kearns West",
+      "lat": 40.639,
+      "lon": -112.079
+    },
+    {
+      "id": "PC614",
+      "name": "Apple Valley Ridge",
+      "lat": 37.0949,
+      "lon": -113.1857
+    },
+    {
+      "id": "PC615",
+      "name": "Beaver Ridge",
+      "lat": 38.154,
+      "lon": -112.6092
+    },
+    {
+      "id": "PC616",
+      "name": "Andy Mesa",
+      "lat": 38.5902,
+      "lon": -109.2515
+    },
+    {
+      "id": "PC617",
+      "name": "Frisco",
+      "lat": 38.4746,
+      "lon": -113.2375
+    },
+    {
+      "id": "PC618",
+      "name": "Indianola West",
+      "lat": 39.8049,
+      "lon": -111.5071
+    },
+    {
+      "id": "PC619",
+      "name": "Eagle Hill",
+      "lat": 40.3092,
+      "lon": -112.2311
+    },
+    {
+      "id": "PC620",
+      "name": "Black Mountain",
+      "lat": 40.8281,
+      "lon": -112.8052
+    },
+    {
+      "id": "PC664",
+      "name": "Echo",
+      "lat": 40.9967,
+      "lon": -111.4654
+    },
+    {
+      "id": "PC665",
+      "name": "Sunset Pass",
+      "lat": 41.6918,
+      "lon": -112.5687
+    },
+    {
+      "id": "PC672",
+      "name": "Pine Ridge",
+      "lat": 38.3167,
+      "lon": -109.2104
+    },
+    {
+      "id": "PC674",
+      "name": "Leamington Pass",
+      "lat": 39.5132,
+      "lon": -112.2063
+    },
+    {
+      "id": "PCEU1",
+      "name": "PRICE",
+      "lat": 39.5329,
+      "lon": -110.806
+    },
+    {
+      "id": "PCKU1",
+      "name": "PINE CREEK",
+      "lat": 38.8819,
+      "lon": -112.2492
+    },
+    {
+      "id": "PGLU1",
+      "name": "PANGUITCH LAKE RS",
+      "lat": 37.7043,
+      "lon": -112.6502
+    },
+    {
+      "id": "PGRU1",
+      "name": "PLEASANT GROVE",
+      "lat": 40.4311,
+      "lon": -111.751
+    },
+    {
+      "id": "PKLU1",
+      "name": "PICKLE KEG",
+      "lat": 39.0122,
+      "lon": -111.5826
+    },
+    {
+      "id": "PNGU1",
+      "name": "PANGUITCH",
+      "lat": 37.8698,
+      "lon": -112.4344
+    },
+    {
+      "id": "PRCUT",
+      "name": "Provo River - Charleston",
+      "lat": 40.4847,
+      "lon": -111.4626
+    },
+    {
+      "id": "PSRIM",
+      "name": "Peter Sinks Rim",
+      "lat": 41.9191,
+      "lon": -111.5102
+    },
+    {
+      "id": "PSUU1",
+      "name": "PARLEY'S SUMMIT",
+      "lat": 40.7618,
+      "lon": -111.6292
+    },
+    {
+      "id": "PVLU1",
+      "name": "PARK VALLEY",
+      "lat": 41.7732,
+      "lon": -113.286
+    },
+    {
+      "id": "PWDU1",
+      "name": "POWDER MOUNTAIN",
+      "lat": 41.37,
+      "lon": -111.77
+    },
+    {
+      "id": "QBG",
+      "name": "Brigham City 3",
+      "lat": 41.4899,
+      "lon": -112.0214
+    },
+    {
+      "id": "QBR",
+      "name": "Brigham City",
+      "lat": 41.4929,
+      "lon": -112.0178
+    },
+    {
+      "id": "QBV",
+      "name": "Bountiful - Viewmont",
+      "lat": 40.9029,
+      "lon": -111.8844
+    },
+    {
+      "id": "QCV",
+      "name": "Copperview",
+      "lat": 40.5981,
+      "lon": -111.8942
+    },
+    {
+      "id": "QED",
+      "name": "Erda",
+      "lat": 40.6006,
+      "lon": -112.355
+    },
+    {
+      "id": "QEN",
+      "name": "Enoch",
+      "lat": 37.7475,
+      "lon": -113.0555
+    },
+    {
+      "id": "QES",
+      "name": "Escalante",
+      "lat": 37.7756,
+      "lon": -111.6147
+    },
+    {
+      "id": "QH3",
+      "name": "Herriman",
+      "lat": 40.4964,
+      "lon": -112.0363
+    },
+    {
+      "id": "QHB",
+      "name": "Heber",
+      "lat": 40.498,
+      "lon": -111.3976
+    },
+    {
+      "id": "QHU",
+      "name": "Hurricane",
+      "lat": 37.179,
+      "lon": -113.3052
+    },
+    {
+      "id": "QHV",
+      "name": "Harrisville",
+      "lat": 41.3028,
+      "lon": -111.9883
+    },
+    {
+      "id": "QHW",
+      "name": "Hawthorne",
+      "lat": 40.7335,
+      "lon": -111.8717
+    },
+    {
+      "id": "QIP",
+      "name": "Inland Port",
+      "lat": 40.8079,
+      "lon": -112.0877
+    },
+    {
+      "id": "QLN",
+      "name": "Lindon",
+      "lat": 40.3388,
+      "lon": -111.7133
+    },
+    {
+      "id": "QLP",
+      "name": "Lake Park",
+      "lat": 40.7099,
+      "lon": -112.0087
+    },
+    {
+      "id": "QM7",
+      "name": "Moab",
+      "lat": 38.5648,
+      "lon": -109.5364
+    },
+    {
+      "id": "QMA",
+      "name": "Magna",
+      "lat": 40.7121,
+      "lon": -112.1112
+    },
+    {
+      "id": "QNR",
+      "name": "Near Road",
+      "lat": 40.6628,
+      "lon": -111.9018
+    },
+    {
+      "id": "QO2",
+      "name": "Ogden #2",
+      "lat": 41.207,
+      "lon": -111.9752
+    },
+    {
+      "id": "QP2",
+      "name": "Price",
+      "lat": 39.5958,
+      "lon": -110.77
+    },
+    {
+      "id": "QRP",
+      "name": "Rose Park",
+      "lat": 40.7955,
+      "lon": -111.9309
+    },
+    {
+      "id": "QRS",
+      "name": "Roosevelt",
+      "lat": 40.2943,
+      "lon": -110.009
+    },
+    {
+      "id": "QSA",
+      "name": "Saltaire",
+      "lat": 40.806,
+      "lon": -112.0498
+    },
+    {
+      "id": "QSF",
+      "name": "Spanish Fork",
+      "lat": 40.1363,
+      "lon": -111.6602
+    },
+    {
+      "id": "QSM",
+      "name": "Smithfield",
+      "lat": 41.8428,
+      "lon": -111.8519
+    },
+    {
+      "id": "QUTTC",
+      "name": "Utah Technical Center",
+      "lat": 40.7771,
+      "lon": -111.945
+    },
+    {
+      "id": "QUURB",
+      "name": "UofU Red Butte",
+      "lat": 40.7665,
+      "lon": -111.8284
+    },
+    {
+      "id": "QV4",
+      "name": "Vernal",
+      "lat": 40.4647,
+      "lon": -109.5608
+    },
+    {
+      "id": "RACU1",
+      "name": "MCCRACKEN MESA",
+      "lat": 37.4467,
+      "lon": -109.3378
+    },
+    {
+      "id": "RBSU1",
+      "name": "ROCKY BASIN-SETTLEME",
+      "lat": 40.4429,
+      "lon": -112.2238
+    },
+    {
+      "id": "RCKU1",
+      "name": "ROCK CREEK",
+      "lat": 40.5487,
+      "lon": -110.6929
+    },
+    {
+      "id": "REFU1",
+      "name": "REES FLAT",
+      "lat": 39.4967,
+      "lon": -111.7251
+    },
+    {
+      "id": "RMLU1",
+      "name": "REDDEN MINE LWR",
+      "lat": 40.675,
+      "lon": -111.2177
+    },
+    {
+      "id": "RPRU1",
+      "name": "RED PINE RIDGE",
+      "lat": 39.452,
+      "lon": -111.2722
+    },
+    {
+      "id": "SBBWK",
+      "name": "SNOWBASIN - BOARDWALK",
+      "lat": 41.1981,
+      "lon": -111.867
+    },
+    {
+      "id": "SBDU1",
+      "name": "SNOWBIRD",
+      "lat": 40.564,
+      "lon": -111.655
+    },
+    {
+      "id": "SBE",
+      "name": "SNOWBASIN - BASE",
+      "lat": 41.2151,
+      "lon": -111.8582
+    },
+    {
+      "id": "SCKU1",
+      "name": "STEEL CREEK PARK",
+      "lat": 40.9086,
+      "lon": -110.5046
+    },
+    {
+      "id": "SFFU1",
+      "name": "SUNFLOWER FLAT",
+      "lat": 38.048,
+      "lon": -111.3398
+    },
+    {
+      "id": "SFLU1",
+      "name": "YAMPA PLATEAU",
+      "lat": 40.278,
+      "lon": -109.2888
+    },
+    {
+      "id": "SHPUT",
+      "name": "Sharp Mountain",
+      "lat": 41.4412,
+      "lon": -111.7216
+    },
+    {
+      "id": "SHWU1",
+      "name": "SAND HOLLOW",
+      "lat": 37.1052,
+      "lon": -113.3561
+    },
+    {
+      "id": "SIGU1",
+      "name": "SIGNAL PEAK",
+      "lat": 38.6334,
+      "lon": -112.0607
+    },
+    {
+      "id": "SND",
+      "name": "Arrowhead Summit",
+      "lat": 40.3684,
+      "lon": -111.594
+    },
+    {
+      "id": "SNI",
+      "name": "SNOWBASIN - MID  BOWL",
+      "lat": 41.1995,
+      "lon": -111.859
+    },
+    {
+      "id": "SNM",
+      "name": "Mid Mountain",
+      "lat": 40.3744,
+      "lon": -111.5945
+    },
+    {
+      "id": "SPKU1",
+      "name": "SPIRIT LK",
+      "lat": 40.8387,
+      "lon": -110.0052
+    },
+    {
+      "id": "SPMU1",
+      "name": "SPLIT MOUNTAIN",
+      "lat": 40.3914,
+      "lon": -109.3533
+    },
+    {
+      "id": "SPYU1",
+      "name": "SPOOKY",
+      "lat": 37.5147,
+      "lon": -111.2619
+    },
+    {
+      "id": "SQUU1",
+      "name": "SQUAW SPRINGS",
+      "lat": 38.4975,
+      "lon": -112.0078
+    },
+    {
+      "id": "SRFU1",
+      "name": "SAN RAFAEL RIVER NEAR GREEN RIVER 14SW",
+      "lat": 38.8583,
+      "lon": -110.3694
+    },
+    {
+      "id": "SRKU1",
+      "name": "EAST FORK SEVIER RIVER NEAR KINGSTON 2E",
+      "lat": 38.1964,
+      "lon": -112.1469
+    },
+    {
+      "id": "STDU1",
+      "name": "STRAWBERRY DIVIDE",
+      "lat": 40.1649,
+      "lon": -111.2066
+    },
+    {
+      "id": "STLU1",
+      "name": "BEAR RIVER RS",
+      "lat": 40.8852,
+      "lon": -110.8277
+    },
+    {
+      "id": "SUNUT",
+      "name": "SunCrest",
+      "lat": 40.4804,
+      "lon": -111.8371
+    },
+    {
+      "id": "SURU1",
+      "name": "SUU RANCH",
+      "lat": 37.5971,
+      "lon": -112.9295
+    },
+    {
+      "id": "SWI",
+      "name": "SNOWBASIN - WILDCAT",
+      "lat": 41.2015,
+      "lon": -111.8635
+    },
+    {
+      "id": "TADU1",
+      "name": "DUCHESNE RIVER NEAR TABIONA 7SE",
+      "lat": 40.2997,
+      "lon": -110.6042
+    },
+    {
+      "id": "TAKU1",
+      "name": "TAKKA WIIYA",
+      "lat": 39.741,
+      "lon": -113.9826
+    },
+    {
+      "id": "TCKU1",
+      "name": "TROUT CREEK",
+      "lat": 40.7392,
+      "lon": -109.6727
+    },
+    {
+      "id": "TFRU1",
+      "name": "TELEGRAPH FLAT",
+      "lat": 37.1915,
+      "lon": -112.027
+    },
+    {
+      "id": "TGLU1",
+      "name": "TONY GROVE LAKE",
+      "lat": 41.8984,
+      "lon": -111.6297
+    },
+    {
+      "id": "TGSU1",
+      "name": "TONY GROVE RS",
+      "lat": 41.8857,
+      "lon": -111.5693
+    },
+    {
+      "id": "THCU1",
+      "name": "THAYNES CANYON",
+      "lat": 40.6236,
+      "lon": -111.5332
+    },
+    {
+      "id": "TLNU1",
+      "name": "TIMBERLINE",
+      "lat": 39.6771,
+      "lon": -110.4339
+    },
+    {
+      "id": "TORU1",
+      "name": "USCRN SITE NEAR TORREY 7E",
+      "lat": 38.3028,
+      "lon": -111.2933
+    },
+    {
+      "id": "TPKU1",
+      "name": "TEMPLE FORK",
+      "lat": 41.7933,
+      "lon": -111.5459
+    },
+    {
+      "id": "TR937",
+      "name": "ASHLEY #3 PORTABLE",
+      "lat": 40.5442,
+      "lon": -110.2884
+    },
+    {
+      "id": "TRLU1",
+      "name": "TRIAL LAKE",
+      "lat": 40.6793,
+      "lon": -110.9488
+    },
+    {
+      "id": "TS301",
+      "name": "UIF-1 PORTABLE",
+      "lat": 40.4668,
+      "lon": -111.1035
+    },
+    {
+      "id": "TS303",
+      "name": "GREEN CANYON",
+      "lat": 41.7694,
+      "lon": -111.7667
+    },
+    {
+      "id": "TS577",
+      "name": "DIXIE PORTABLE #3",
+      "lat": 37.7305,
+      "lon": -112.2353
+    },
+    {
+      "id": "TS715",
+      "name": "DIXIE PORTABLE #2",
+      "lat": 37.6411,
+      "lon": -112.6645
+    },
+    {
+      "id": "TS763",
+      "name": "COLOR COUNTRY QD #1",
+      "lat": 37.6992,
+      "lon": -112.3594
+    },
+    {
+      "id": "TT084",
+      "name": "FISHLAKE D4 PT #4",
+      "lat": 38.9214,
+      "lon": -111.4121
+    },
+    {
+      "id": "TT143",
+      "name": "MANTI - PORTABLE #4",
+      "lat": 37.8303,
+      "lon": -109.3991
+    },
+    {
+      "id": "TT181",
+      "name": "FISHLAKE D2 PT #2",
+      "lat": 38.0467,
+      "lon": -111.3427
+    },
+    {
+      "id": "TT255",
+      "name": "OAK SPRINGS",
+      "lat": 40.4065,
+      "lon": -112.0771
+    },
+    {
+      "id": "TT390",
+      "name": "DUGWAY-N",
+      "lat": 40.3873,
+      "lon": -113.0323
+    },
+    {
+      "id": "TT391",
+      "name": "DUGWAY-S",
+      "lat": 40.1637,
+      "lon": -112.8909
+    },
+    {
+      "id": "TT392",
+      "name": "DUGWAY-W",
+      "lat": 40.1156,
+      "lon": -113.1112
+    },
+    {
+      "id": "TT441",
+      "name": "WILLOW GULCH",
+      "lat": 37.8897,
+      "lon": -111.4692
+    },
+    {
+      "id": "TT509",
+      "name": "DEER SPRINGS POINT (DEER)",
+      "lat": 37.3232,
+      "lon": -112.1849
+    },
+    {
+      "id": "TT900",
+      "name": "PINE VALLEY",
+      "lat": 37.3856,
+      "lon": -113.5024
+    },
+    {
+      "id": "TVWU1",
+      "name": "TULE VALLEY",
+      "lat": 39.3502,
+      "lon": -113.3849
+    },
+    {
+      "id": "UABRB",
+      "name": "Above Red Butte Reservoir (ABRB)",
+      "lat": 40.7806,
+      "lon": -111.8072
+    },
+    {
+      "id": "UATKF",
+      "name": "Knowlton Fork (KF)",
+      "lat": 40.8101,
+      "lon": -111.7669
+    },
+    {
+      "id": "UATTM",
+      "name": "Todd's Meadow (TM)",
+      "lat": 40.7891,
+      "lon": -111.7964
+    },
+    {
+      "id": "UCC42",
+      "name": "Centerfield",
+      "lat": 39.0994,
+      "lon": -111.8077
+    },
+    {
+      "id": "UCC49",
+      "name": "Forest Dale",
+      "lat": 40.7172,
+      "lon": -111.8641
+    },
+    {
+      "id": "UCC50",
+      "name": "Glendale",
+      "lat": 40.7273,
+      "lon": -111.9329
+    },
+    {
+      "id": "UCC51",
+      "name": "Rose Park",
+      "lat": 40.801,
+      "lon": -111.937
+    },
+    {
+      "id": "UCC52",
+      "name": "Pump 6200",
+      "lat": 40.6379,
+      "lon": -111.8317
+    },
+    {
+      "id": "UCL03",
+      "name": "NL Water",
+      "lat": 41.7856,
+      "lon": -111.773
+    },
+    {
+      "id": "UCL05",
+      "name": "Wah Wah",
+      "lat": 38.4997,
+      "lon": -113.5764
+    },
+    {
+      "id": "UCL07",
+      "name": "TWDEF Ridge",
+      "lat": 41.8664,
+      "lon": -111.5121
+    },
+    {
+      "id": "UDDU1",
+      "name": "USU DOC DANIEL",
+      "lat": 41.8643,
+      "lon": -111.506
+    },
+    {
+      "id": "UGRFC",
+      "name": "GIRF Climate Station",
+      "lat": 40.7612,
+      "lon": -111.8299
+    },
+    {
+      "id": "UINU1",
+      "name": "FORT DUCHESNE",
+      "lat": 40.2848,
+      "lon": -109.8618
+    },
+    {
+      "id": "UKALF",
+      "name": "Kalf Plot Portable",
+      "lat": 39.4726,
+      "lon": -111.4929
+    },
+    {
+      "id": "ULSSB",
+      "name": "UofU LS Skaggs Applied Sciences",
+      "lat": 40.7632,
+      "lon": -111.852
+    },
+    {
+      "id": "UP005",
+      "name": "MORGN1",
+      "lat": 41.0512,
+      "lon": -111.6861
+    },
+    {
+      "id": "UP010",
+      "name": "MURDOC",
+      "lat": 38.4871,
+      "lon": -112.9839
+    },
+    {
+      "id": "UP028",
+      "name": "CENWWS",
+      "lat": 40.9336,
+      "lon": -111.8921
+    },
+    {
+      "id": "UP039",
+      "name": "LATMER",
+      "lat": 38.0594,
+      "lon": -113.3679
+    },
+    {
+      "id": "UP056",
+      "name": "PEHRSN",
+      "lat": 40.1278,
+      "lon": -112.3525
+    },
+    {
+      "id": "UP066",
+      "name": "HENFR1",
+      "lat": 41.0041,
+      "lon": -111.4724
+    },
+    {
+      "id": "UP069",
+      "name": "GARFL1",
+      "lat": 40.7518,
+      "lon": -112.0654
+    },
+    {
+      "id": "UP077",
+      "name": "HENFR2",
+      "lat": 41.0421,
+      "lon": -111.5169
+    },
+    {
+      "id": "UP094",
+      "name": "BKROCK",
+      "lat": 38.7738,
+      "lon": -112.9129
+    },
+    {
+      "id": "UP106",
+      "name": "CLOVER",
+      "lat": 40.2749,
+      "lon": -112.3971
+    },
+    {
+      "id": "UP137",
+      "name": "VAN",
+      "lat": 39.2891,
+      "lon": -112.6319
+    },
+    {
+      "id": "UP142",
+      "name": "WASAH2",
+      "lat": 41.2298,
+      "lon": -111.086
+    },
+    {
+      "id": "UP153",
+      "name": "BLOOM",
+      "lat": 39.0147,
+      "lon": -112.7812
+    },
+    {
+      "id": "UP154",
+      "name": "WLYNDL",
+      "lat": 39.4901,
+      "lon": -112.4095
+    },
+    {
+      "id": "UP201",
+      "name": "JERICH",
+      "lat": 39.7103,
+      "lon": -112.2133
+    },
+    {
+      "id": "UP231",
+      "name": "UPTON",
+      "lat": 38.2671,
+      "lon": -113.1143
+    },
+    {
+      "id": "UP456",
+      "name": "UINTA1",
+      "lat": 41.1489,
+      "lon": -111.9562
+    },
+    {
+      "id": "UP473",
+      "name": "LKSIDE",
+      "lat": 41.2239,
+      "lon": -112.8774
+    },
+    {
+      "id": "UPRU1",
+      "name": "UPPER P.R. CANYON",
+      "lat": 39.4681,
+      "lon": -109.2858
+    },
+    {
+      "id": "UR296",
+      "name": "AMFORK",
+      "lat": 40.3482,
+      "lon": -111.7799
+    },
+    {
+      "id": "UR297",
+      "name": "ARGONT",
+      "lat": 40.7305,
+      "lon": -113.0135
+    },
+    {
+      "id": "UR298",
+      "name": "ARNOSA",
+      "lat": 40.7291,
+      "lon": -113.5834
+    },
+    {
+      "id": "UR299",
+      "name": "CEDAR",
+      "lat": 39.3789,
+      "lon": -110.442
+    },
+    {
+      "id": "UR303",
+      "name": "DETUR1",
+      "lat": 39.9515,
+      "lon": -111.2811
+    },
+    {
+      "id": "UR305",
+      "name": "GROOME",
+      "lat": 41.2911,
+      "lon": -113.4065
+    },
+    {
+      "id": "UR306",
+      "name": "HOGUP",
+      "lat": 41.2705,
+      "lon": -113.215
+    },
+    {
+      "id": "UR308",
+      "name": "LUCIN2",
+      "lat": 41.368,
+      "lon": -113.9614
+    },
+    {
+      "id": "UR313",
+      "name": "PIGEON",
+      "lat": 41.3352,
+      "lon": -113.8262
+    },
+    {
+      "id": "UR314",
+      "name": "RVRTON",
+      "lat": 40.5569,
+      "lon": -111.9013
+    },
+    {
+      "id": "UR315",
+      "name": "SAGERS",
+      "lat": 38.9617,
+      "lon": -109.5657
+    },
+    {
+      "id": "UR316",
+      "name": "SLDURO",
+      "lat": 40.7346,
+      "lon": -113.8409
+    },
+    {
+      "id": "UR317",
+      "name": "SOLAR",
+      "lat": 40.7076,
+      "lon": -112.5084
+    },
+    {
+      "id": "UR321",
+      "name": "SPVIL1",
+      "lat": 40.1794,
+      "lon": -111.618
+    },
+    {
+      "id": "UR322",
+      "name": "STARR",
+      "lat": 39.9433,
+      "lon": -111.8169
+    },
+    {
+      "id": "UR325",
+      "name": "WDSIDE",
+      "lat": 39.2411,
+      "lon": -110.3465
+    },
+    {
+      "id": "UR326",
+      "name": "WHELON",
+      "lat": 41.7732,
+      "lon": -112.0968
+    },
+    {
+      "id": "UR327",
+      "name": "WHTHSE",
+      "lat": 38.9447,
+      "lon": -109.3813
+    },
+    {
+      "id": "UR328",
+      "name": "WILLRD",
+      "lat": 41.4457,
+      "lon": -112.0518
+    },
+    {
+      "id": "UR468",
+      "name": "KAYSV1",
+      "lat": 41.0009,
+      "lon": -111.9257
+    },
+    {
+      "id": "UR471",
+      "name": "NTHSL2",
+      "lat": 40.8521,
+      "lon": -111.9135
+    },
+    {
+      "id": "UR602",
+      "name": "CGATE2",
+      "lat": 39.7348,
+      "lon": -110.8721
+    },
+    {
+      "id": "UR605",
+      "name": "COLTN2",
+      "lat": 39.8811,
+      "lon": -111.0448
+    },
+    {
+      "id": "UR606",
+      "name": "DETUR2",
+      "lat": 39.9514,
+      "lon": -111.2811
+    },
+    {
+      "id": "UR613",
+      "name": "SPVIL2",
+      "lat": 40.1794,
+      "lon": -111.6181
+    },
+    {
+      "id": "UR635",
+      "name": "MORGN2",
+      "lat": 41.0512,
+      "lon": -111.6861
+    },
+    {
+      "id": "USWU1",
+      "name": "UPPER SAND WASH",
+      "lat": 39.7082,
+      "lon": -109.441
+    },
+    {
+      "id": "UT112",
+      "name": "SR-112 @ MP 6 Utah Avenue",
+      "lat": 40.5483,
+      "lon": -112.3416
+    },
+    {
+      "id": "UT123",
+      "name": "US-6 at MP 256 SR-123",
+      "lat": 39.526,
+      "lon": -110.5744
+    },
+    {
+      "id": "UT3",
+      "name": "PARLEYS SUMMIT",
+      "lat": 40.753,
+      "lon": -111.625
+    },
+    {
+      "id": "UT32",
+      "name": "I-80 @ mp 1",
+      "lat": 40.7449,
+      "lon": -114.0225
+    },
+    {
+      "id": "UTASG",
+      "name": "Aspen Grove",
+      "lat": 40.4046,
+      "lon": -111.6046
+    },
+    {
+      "id": "UTBU1",
+      "name": "BEAVER 15E",
+      "lat": 38.2731,
+      "lon": -112.377
+    },
+    {
+      "id": "UTCDF",
+      "name": "Cardiff - Big Cottonwood Canyon",
+      "lat": 40.6503,
+      "lon": -111.6499
+    },
+    {
+      "id": "UTCOP",
+      "name": "US-40 at MP 41 Co-Op Creek",
+      "lat": 40.2418,
+      "lon": -111.1771
+    },
+    {
+      "id": "UTDOL",
+      "name": "I-80 at MP 81 Dolomite",
+      "lat": 40.722,
+      "lon": -112.564
+    },
+    {
+      "id": "UTECO",
+      "name": "I-80 at MP 172 Echo Canyon",
+      "lat": 41.0102,
+      "lon": -111.3744
+    },
+    {
+      "id": "UTHFT",
+      "name": "I-15 at MP 54 Hamiltons Fort",
+      "lat": 37.6284,
+      "lon": -113.1206
+    },
+    {
+      "id": "UTICS",
+      "name": "Indian Canyon Summit",
+      "lat": 39.8857,
+      "lon": -110.7479
+    },
+    {
+      "id": "UTLVJ",
+      "name": "US-89 at MP 104 Long Valley Jct",
+      "lat": 37.4907,
+      "lon": -112.5117
+    },
+    {
+      "id": "UTMPK",
+      "name": "Monument Peak",
+      "lat": 39.6143,
+      "lon": -111.1773
+    },
+    {
+      "id": "UTMU1",
+      "name": "MANILA 18ESE",
+      "lat": 40.9226,
+      "lon": -109.3899
+    },
+    {
+      "id": "UTMVY",
+      "name": "SR-163 at MP 0.5 Monument Valley",
+      "lat": 37.0043,
+      "lon": -110.1734
+    },
+    {
+      "id": "UTONM",
+      "name": "SR-224 at MP 3 Ontario Mine",
+      "lat": 40.6253,
+      "lon": -111.4968
+    },
+    {
+      "id": "UTORM",
+      "name": "I-15 @ Orem",
+      "lat": 40.3192,
+      "lon": -111.7267
+    },
+    {
+      "id": "UTPSB",
+      "name": "SR-10 at MP 54 Poison Spring Bench",
+      "lat": 39.4016,
+      "lon": -110.8902
+    },
+    {
+      "id": "UTPU1",
+      "name": "PRICE 3E",
+      "lat": 39.608,
+      "lon": -110.7507
+    },
+    {
+      "id": "UTPWD",
+      "name": "Powder Mountain",
+      "lat": 41.3699,
+      "lon": -111.764
+    },
+    {
+      "id": "UTRMD",
+      "name": "US-91 at MP 39 Richmond",
+      "lat": 41.909,
+      "lon": -111.8145
+    },
+    {
+      "id": "UTRVT",
+      "name": "SR-154 at MP 7 Riverton",
+      "lat": 40.5215,
+      "lon": -111.9834
+    },
+    {
+      "id": "UTSAL",
+      "name": "SR-95 @ Salvation Knoll",
+      "lat": 37.5647,
+      "lon": -109.8186
+    },
+    {
+      "id": "UTTAG",
+      "name": "I-84 at MP 108 Taggarts",
+      "lat": 41.053,
+      "lon": -111.5987
+    },
+    {
+      "id": "UTTBF",
+      "name": "Tibble Fork",
+      "lat": 40.4766,
+      "lon": -111.6493
+    },
+    {
+      "id": "UTTP3",
+      "name": "Rainbow Road Tripod",
+      "lat": 38.4375,
+      "lon": -112.3019
+    },
+    {
+      "id": "UTTPD",
+      "name": "Torpedo Hill - Big Cottonwood Canyon",
+      "lat": 40.6229,
+      "lon": -111.7504
+    },
+    {
+      "id": "UTVU1",
+      "name": "VERNAL 23SSW",
+      "lat": 40.1346,
+      "lon": -109.6429
+    },
+    {
+      "id": "UTWCR",
+      "name": "I-15 at Wildcat Ridge",
+      "lat": 38.4212,
+      "lon": -112.6492
+    },
+    {
+      "id": "UTWDS",
+      "name": "SR-177 at MP 14.5 Syracuse",
+      "lat": 41.0974,
+      "lon": -112.0853
+    },
+    {
+      "id": "UTWLC",
+      "name": "White Pine - Little Cottonwood Canyon",
+      "lat": 40.5761,
+      "lon": -111.6819
+    },
+    {
+      "id": "UTWLD",
+      "name": "I-15 @ Willard POE",
+      "lat": 41.4402,
+      "lon": -112.0564
+    },
+    {
+      "id": "UTWMR",
+      "name": "SR-73 @ MP 8.8 West Mercur",
+      "lat": 40.2968,
+      "lon": -112.2743
+    },
+    {
+      "id": "UUPT1",
+      "name": "UU Portable Trailer 1",
+      "lat": 41.1989,
+      "lon": -111.9337
+    },
+    {
+      "id": "UUPYA",
+      "name": "UofU Playa Research Site",
+      "lat": 41.0303,
+      "lon": -112.1175
+    },
+    {
+      "id": "UUPYF",
+      "name": "UofU Playa Flux Tower",
+      "lat": 41.0304,
+      "lon": -112.1174
+    },
+    {
+      "id": "UUSSD",
+      "name": "UVU Sundance Study Plot",
+      "lat": 40.3808,
+      "lon": -111.5942
+    },
+    {
+      "id": "UUSYR",
+      "name": "Syracuse",
+      "lat": 41.0885,
+      "lon": -112.1188
+    },
+    {
+      "id": "VNCU1",
+      "name": "VERNON CREEK",
+      "lat": 39.9368,
+      "lon": -112.4144
+    },
+    {
+      "id": "VRH",
+      "name": "VERNON HILL",
+      "lat": 40.1301,
+      "lon": -112.3847
+    },
+    {
+      "id": "WBB",
+      "name": "U of U William Browning Building",
+      "lat": 40.7662,
+      "lon": -111.8475
+    },
+    {
+      "id": "WEUU1",
+      "name": "WEBER RIVER AT I-84 AT UINTAH",
+      "lat": 41.1369,
+      "lon": -111.9194
+    },
+    {
+      "id": "WFBU1",
+      "name": "WEST FORK BLACKSMITHS FORK NEAR TABIONA 27NE",
+      "lat": 40.8447,
+      "lon": -110.66
+    },
+    {
+      "id": "WFLU1",
+      "name": "WEBSTER FLAT",
+      "lat": 37.5749,
+      "lon": -112.9015
+    },
+    {
+      "id": "WHBU1",
+      "name": "WILDHORSE",
+      "lat": 39.5453,
+      "lon": -109.9081
+    },
+    {
+      "id": "WHRU1",
+      "name": "WHITEROCKS 9N",
+      "lat": 40.6006,
+      "lon": -109.9264
+    },
+    {
+      "id": "WNTU1",
+      "name": "WINTER RIDGE",
+      "lat": 39.5033,
+      "lon": -109.5578
+    },
+    {
+      "id": "WPK",
+      "name": "WENDOVER PEAK",
+      "lat": 40.7529,
+      "lon": -114.0198
+    },
+    {
+      "id": "WRIU1",
+      "name": "WRIGLEY CREEK",
+      "lat": 39.1323,
+      "lon": -111.3568
+    },
+    {
+      "id": "WRRU1",
+      "name": "WHITE REEF",
+      "lat": 37.216,
+      "lon": -113.3784
+    },
+    {
+      "id": "WRSU1",
+      "name": "WHITE RIVER BELOW TABBYUNE CREEK NEAR SOLDIER SUMMIT 5SE",
+      "lat": 39.8758,
+      "lon": -111.0367
+    },
+    {
+      "id": "WRVU1",
+      "name": "WHITE RIVER #1",
+      "lat": 39.9644,
+      "lon": -110.9885
+    },
+    {
+      "id": "WSMU1",
+      "name": "WEST SUMMIT",
+      "lat": 38.0139,
+      "lon": -109.1274
+    },
+    {
+      "id": "WTRU1",
+      "name": "WHITEROCKS RIVER NEAR WHITEROCKS NEAR ROOSEVELT 19NNE",
+      "lat": 40.5936,
+      "lon": -109.9317
+    },
+    {
+      "id": "YKEU1",
+      "name": "YANKEE RESERVOIR",
+      "lat": 37.748,
+      "lon": -112.775
+    },
+    {
+      "id": "YLSU1",
+      "name": "YELLOWSTONE DRAINAGE",
+      "lat": 40.5436,
+      "lon": -110.3302
+    },
+    {
+      "id": "ZIOU1",
+      "name": "ZION CANYON",
+      "lat": 37.2047,
+      "lon": -112.9778
+    }
+  ]
+}

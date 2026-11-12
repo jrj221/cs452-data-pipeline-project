@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Utah temperatures</title>
+<style>
+  :root { --bg:#e8ecf1; --ink:#1c2430; --muted:#5b6675; --line:#dde2e9; --accent:#2f6fdd; }
+  html, body { height:100%; margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+  #map { position:fixed; inset:0; }
+  .panel { position:fixed; z-index:10; box-sizing:border-box; background:rgba(255,255,255,.93);
+    backdrop-filter:blur(6px); border:1px solid var(--line); border-radius:12px; box-shadow:0 4px 18px rgba(20,30,50,.10); }
+  .card { top:16px; left:16px; width:310px; padding:16px 18px; }
+  .card h1 { margin:0 0 2px; font-size:18px; font-weight:650; letter-spacing:-.01em; }
+  .card .sub { margin:0 0 10px; font-size:12.5px; color:var(--muted); }
+  .stat { display:flex; justify-content:space-between; gap:12px; padding:7px 0; border-top:1px solid #edf0f4; font-size:13px; }
+  .stat span:first-child { color:var(--muted); white-space:nowrap; }
+  .stat span:last-child { text-align:right; font-weight:550; }
+  .stat small { display:block; font-weight:400; color:var(--muted); font-size:11.5px; }
+  .warn span:last-child { color:#b4540a; }
+  #notice { display:none; margin-top:8px; padding:8px 10px; border-radius:8px; background:#fff4e5; color:#8a4b08; font-size:12.5px; }
+  .timebar { left:50%; bottom:18px; transform:translateX(-50%); width:min(720px, calc(100vw - 32px));
+    padding:10px 14px; display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+  .timebar .row { display:flex; align-items:center; gap:8px; width:100%; }
+  .timebar button { border:1px solid var(--line); background:#fff; border-radius:8px; height:32px; min-width:34px; cursor:pointer;
+    font-size:14px; color:var(--ink); }
+  .timebar button:hover { background:#f3f6fa; }
+  .timebar button.on { background:var(--accent); border-color:var(--accent); color:#fff; }
+  .timebar input[type=range] { flex:1; min-width:0; accent-color:var(--accent); }
+  .tlabel { font-size:13px; font-weight:550; }
+  .tlabel small { font-weight:400; color:var(--muted); }
+  .timebar select { border:1px solid var(--line); border-radius:8px; height:32px; background:#fff; font-size:12.5px; color:var(--ink); }
+  @media (max-width:640px) { .card { width:auto; right:16px; padding:10px 14px; } .card .sub, .card .hide-sm { display:none; } }
+</style>
+</head>
+<body>
+<div id="map"></div>
+
+<div class="panel card">
+  <h1>Utah temperatures</h1>
+  <p class="sub">NWS station observations, blended across the state</p>
+  <div class="stat"><span>Most recent refresh</span><span id="refresh">…</span></div>
+  <div class="stat"><span>Showing</span><span id="showing">…</span></div>
+  <div class="stat hide-sm"><span>Stations</span><span id="nstations">…</span></div>
+  <div class="stat hide-sm" id="oldest-row"><span>Oldest reading</span><span id="oldest">…</span></div>
+  <div id="notice"></div>
+</div>
+
+<div class="panel timebar" id="timebar" style="display:none">
+  <div class="row">
+    <button id="prev" title="Previous (left arrow)">&#9664;</button>
+    <button id="play" title="Play / pause (space)">&#9654;</button>
+    <button id="next" title="Next (right arrow)">&#9654;&#10073;</button>
+    <input type="range" id="slider" min="0" max="0" step="1" value="0" aria-label="Time">
+    <select id="range" aria-label="How far back">
+      <option value="24">Last 24 h</option>
+      <option value="48" selected>Last 2 days</option>
+      <option value="168">Last 7 days</option>
+    </select>
+  </div>
+  <div class="tlabel" id="tlabel"></div>
+</div>
+
+<script src="https://cdn.plot.ly/plotly-4.1.1.min.js"></script>
+<script>
+"use strict";
+// ---- Configuration. The key below is Supabase's public "publishable" key: it is meant to be in browser code.
+// Row-level security in the database makes the tables read-only for it. ----
+const SUPABASE_URL = "https://yizssnodqrcajfipemrw.supabase.co";
+const PUBLISHABLE_KEY = "sb_publishable_L9rX0-dWc8jBAWQ6l7HIvg_aOzQPauc";
+const SIGMA_KM = 14;          // how far one station's temperature "spreads" in the blend
+const GRID_STEP = 0.02;       // degrees per heatmap cell (~2 km)
+const VIEW_PAD = 0.15;        // degrees of margin around Utah; also the zoom-out limit
+const REFRESH_MS = 10 * 60 * 1000;   // re-read the database this often while the page is open
+const TZ = "America/Denver";
+const COLORSCALE = ["#053061", "#2166ac", "#4393c3", "#92c5de", "#d1e5f0", "#f7f7f7",
+                    "#fddbc7", "#f4a582", "#d6604d", "#b2182b", "#67001f"].map((c, i) => [i / 10, c]);   // cold -> hot
+
+const params = new URLSearchParams(location.search);
+const FIXTURE = params.get("fixture");        // dev/testing only: load data from a JSON file instead of Supabase
+
+// ---- Formatting (always Mountain time) ----
+const fmtFull = new Intl.DateTimeFormat("en-US", { timeZone: TZ, weekday: "short", month: "short", day: "numeric",
+  hour: "numeric", minute: "2-digit", timeZoneName: "short" });
+const fmtCard = new Intl.DateTimeFormat("en-US", { timeZone: TZ, month: "short", day: "numeric",
+  hour: "numeric", minute: "2-digit", timeZoneName: "short" });
+const fmtTime = new Intl.DateTimeFormat("en-US", { timeZone: TZ, hour: "numeric", minute: "2-digit" });
+const ago = (ms) => { const m = Math.max(0, Math.round(ms / 60000)); return m < 90 ? `${m} min ago` : `${(m / 60).toFixed(1)} h ago`; };
+const $ = (id) => document.getElementById(id);
+
+// ---- Data ----
+async function rest(path, body) {
+  const res = await fetch(SUPABASE_URL + "/rest/v1" + path, {
+    method: body ? "POST" : "GET",
+    headers: { apikey: PUBLISHABLE_KEY, "Content-Type": "application/json" },
+    body: body ? JSON.stringify(body) : undefined,
+  });
+  if (!res.ok) throw new Error(`${path}: ${res.status} ${(await res.text()).slice(0, 200)}`);
+  return res.json();
+}
+
+async function loadData(nFrames) {
+  if (FIXTURE) return (await fetch(FIXTURE)).json();
+  const [stations, frames, latestPoll] = await Promise.all([
+    rest("/stations?select=station_id,name,lat,lon&active=eq.true&order=station_id&limit=1000"),
+    rest("/rpc/poll_frames", { max_frames: nFrames }),
+    rest("/polls?select=finished_at,status&status=in.(ok,partial)&finished_at=not.is.null&order=finished_at.desc&limit=1"),
+  ]);
+  return { stations, frames, latestPoll };
+}
+
+// ---- Geometry / blending ----
+function inRing(x, y, ring) {
+  let inside = false;
+  for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+    const [xi, yi] = ring[i], [xj, yj] = ring[j];
+    if ((yi > y) !== (yj > y) && x < ((xj - xi) * (y - yi)) / (yj - yi) + xi) inside = !inside;
+  }
+  return inside;
+}
+
+/** Grid over Utah + for each in-state cell, the nearby stations and their (fixed) kernel weights. Built once. */
+function buildGrid(geo, stations) {
+  const [minx, miny, maxx, maxy] = geo.bbox;
+  const nx = Math.ceil((maxx - minx) / GRID_STEP) + 1, ny = Math.ceil((maxy - miny) / GRID_STEP) + 1;
+  const lons = Array.from({ length: nx }, (_, i) => minx + i * GRID_STEP);
+  const lats = Array.from({ length: ny }, (_, j) => miny + j * GRID_STEP);
+  const kx = Math.cos(((miny + maxy) / 2) * Math.PI / 180) * 111.32, ky = 110.57;   // km per degree
+  const R2 = (6 * SIGMA_KM) ** 2, inv2s2 = 1 / (2 * SIGMA_KM * SIGMA_KM);
+  const sx = stations.map((s) => s.lon * kx), sy = stations.map((s) => s.lat * ky);
+
+  const cellIx = [], cellIy = [], start = [0], nbr = [], wts = [];
+  for (let j = 0; j < ny; j++) {
+    for (let i = 0; i < nx; i++) {
+      const lon = lons[i], lat = lats[j];
+      if (!geo.state.some((r) => inRing(lon, lat, r))) continue;
+      const px = lon * kx, py = lat * ky;
+      for (let s = 0; s < sx.length; s++) {
+        const d2 = (px - sx[s]) ** 2 + (py - sy[s]) ** 2;
+        if (d2 <= R2) { nbr.push(s); wts.push(Math.exp(-d2 * inv2s2)); }
+      }
+      cellIx.push(i); cellIy.push(j); start.push(nbr.length);
+    }
+  }
+  return { lons, lats, nx, ny, cellIx, cellIy, start, nbr: Int32Array.from(nbr), wts: Float32Array.from(wts), sx, sy, px: (lon) => lon * kx, py: (lat) => lat * ky, kx, ky };
+}
+
+/** Blended temperature for every cell for one frame. `temps[stationIndex]` is NaN where the station has no reading. */
+function computeZ(grid, stations, temps) {
+  const { nx, ny, cellIx, cellIy, start, nbr, wts, sx, sy } = grid;
+  const z = Array.from({ length: ny }, () => new Array(nx).fill(null));
+  let avail = null;   // list of stations with data, built lazily for the nearest-station fallback
+  for (let c = 0; c < cellIx.length; c++) {
+    let sw = 0, swt = 0;
+    for (let k = start[c]; k < start[c + 1]; k++) {
+      const t = temps[nbr[k]];
+      if (t === t) { sw += wts[k]; swt += wts[k] * t; }
+    }
+    let v;
+    if (sw > 0) v = swt / sw;
+    else {  // no reading within reach: use the nearest station that has one
+      if (!avail) avail = stations.map((_, s) => s).filter((s) => temps[s] === temps[s]);
+      const px = grid.px(grid.lons[cellIx[c]]), py = grid.py(grid.lats[cellIy[c]]);
+      let best = Infinity; v = null;
+      for (const s of avail) { const d2 = (px - sx[s]) ** 2 + (py - sy[s]) ** 2; if (d2 < best) { best = d2; v = temps[s]; } }
+    }
+    z[cellIy[c]][cellIx[c]] = v === null ? null : Math.round(v * 10) / 10;
+  }
+  return z;
+}
+
+// ---- State ----
+const S = { geo: null, stations: [], sIndex: new Map(), grid: null, frames: [], cache: new Map(), cur: -1,
+            latestPoll: null, zmin: 30, zmax: 70, gd: null, timer: null, nFrames: 48 };
+
+function frameTemps(frame) {
+  const temps = new Float32Array(S.stations.length).fill(NaN), ages = new Float32Array(S.stations.length).fill(NaN);
+  for (const [id, t, age] of frame.rows) { const i = S.sIndex.get(id); if (i !== undefined) { temps[i] = t; ages[i] = age; } }
+  return { temps, ages };
+}
+
+function frameView(k) {
+  if (S.cache.has(k)) return S.cache.get(k);
+  const frame = S.frames[k], { temps, ages } = frameTemps(frame);
+  const z = computeZ(S.grid, S.stations, temps);
+  const tMs = Date.parse(frame.t), x = [], y = [], c = [], cd = [];
+  let oldest = 0, n = 0;
+  S.stations.forEach((s, i) => {
+    if (temps[i] !== temps[i]) return;
+    n++; oldest = Math.max(oldest, ages[i]);
+    x.push(s.lon); y.push(s.lat); c.push(temps[i]);
+    cd.push([s.name || s.station_id, s.station_id, temps[i], fmtTime.format(tMs - ages[i] * 60000), Math.round(ages[i])]);
+  });
+  const view = { z, x, y, c, cd, n, oldest };
+  S.cache.set(k, view);
+  if (S.cache.size > 12) S.cache.delete(S.cache.keys().next().value);
+  return view;
+}
+
+// ---- Drawing ----
+const dotHover = "<b>%{customdata[0]}</b> · %{customdata[1]}<br>%{customdata[2]:.1f} °F<br>" +
+                 "read at %{customdata[3]} (%{customdata[4]} min before this map)<extra></extra>";
+
+function lineTrace(rings, color, width) {
+  const x = [], y = [];
+  for (const r of rings) { for (const p of r) { x.push(p[0]); y.push(p[1]); } x.push(null); y.push(null); }
+  return { type: "scatter", mode: "lines", x, y, line: { color, width }, hoverinfo: "skip", showlegend: false };
+}
+
+function initPlot() {
+  const [minx, miny, maxx, maxy] = S.geo.bbox;
+  const xr = [minx - VIEW_PAD, maxx + VIEW_PAD], yr = [miny - VIEW_PAD, maxy + VIEW_PAD];
+  const narrow = window.innerWidth < 640;   // on phones the info card covers the top-right, so the color bar moves down
+  const axis = { showgrid: false, zeroline: false, showticklabels: false, ticks: "", showline: false, constrain: "range" };
+  const traces = [
+    { type: "heatmap", x: S.grid.lons, y: S.grid.lats, z: [[null]], zmin: S.zmin, zmax: S.zmax, colorscale: COLORSCALE,
+      zsmooth: false, hovertemplate: "%{z:.1f} °F (blended estimate)<extra></extra>",
+      colorbar: { orientation: "h", x: 0.985, ...(narrow ? { y: 0.15, yanchor: "bottom", len: 0.5 } : { y: 0.985, yanchor: "top", len: 0.22 }), xanchor: "right", lenmode: "fraction",
+        thickness: 10, title: { text: "Temperature (°F)", side: "top", font: { size: 12 } }, ticksuffix: "°",
+        tickfont: { size: 11 }, outlinewidth: 0, bgcolor: "rgba(255,255,255,0.85)", xpad: 12, ypad: 10 } },
+    lineTrace(S.geo.counties, "rgba(40,40,40,0.28)", 0.6),
+    lineTrace(S.geo.state, "#1c2430", 1.8),
+    { type: "scatter", mode: "markers", x: [], y: [], customdata: [], showlegend: false, hovertemplate: dotHover,
+      marker: { size: 5, color: [], cmin: S.zmin, cmax: S.zmax, colorscale: COLORSCALE,
+                line: { color: "rgba(20,28,40,0.65)", width: 0.8 } } },
+  ];
+  const layout = {
+    xaxis: { range: xr, minallowed: xr[0] - 6, maxallowed: xr[1] + 6, ...axis },   // wide x so the map can fill any window
+    yaxis: { range: yr, minallowed: yr[0], maxallowed: yr[1], scaleanchor: "x",    // y limits = the zoom-out limit
+             scaleratio: 1 / Math.cos(((miny + maxy) / 2) * Math.PI / 180), ...axis },
+    dragmode: "pan", plot_bgcolor: "#e8ecf1", paper_bgcolor: "#e8ecf1", margin: { l: 0, r: 0, t: 0, b: 0 },
+    hoverlabel: { bgcolor: "white", font: { size: 13, color: "#1c2430" }, bordercolor: "#d5dae1" },
+    font: { color: "#1c2430" },
+  };
+  Plotly.newPlot("map", traces, layout, { scrollZoom: true, displaylogo: false, doubleClick: "reset", responsive: true,
+    modeBarButtonsToRemove: ["select2d", "lasso2d", "autoScale2d"] });
+  S.gd = $("map");
+}
+
+function showFrame(k) {
+  k = Math.max(0, Math.min(S.frames.length - 1, k));
+  S.cur = k;
+  const v = frameView(k);
+  Plotly.restyle(S.gd, { z: [v.z] }, [0]);
+  Plotly.restyle(S.gd, { x: [v.x], y: [v.y], customdata: [v.cd], "marker.color": [v.c] }, [3]);
+  $("slider").value = k;
+  renderCard();
+}
+
+function renderCard() {
+  if (S.cur < 0) return;
+  const f = S.frames[S.cur], v = frameView(S.cur), live = S.cur === S.frames.length - 1;
+  const tMs = Date.parse(f.t);
+  $("showing").innerHTML = `${fmtCard.format(tMs)}<small>${live ? "latest map" : ago(Date.now() - tMs)}</small>`;
+  $("tlabel").innerHTML = `${fmtFull.format(tMs)} <small>· ${live ? "latest" : ago(Date.now() - tMs)} · frame ${S.cur + 1} of ${S.frames.length}</small>`;
+  $("nstations").textContent = `${v.n} of ${S.stations.length} reporting`;
+  $("oldest").textContent = `${Math.round(v.oldest)} min before this map`;
+  $("oldest-row").classList.toggle("warn", v.oldest > 120);
+  renderRefresh();
+}
+
+function renderRefresh() {
+  const p = S.latestPoll;
+  if (!p) { $("refresh").textContent = "none yet"; return; }
+  const ms = Date.parse(p.finished_at);
+  $("refresh").innerHTML = `${fmtCard.format(ms)}<small>${ago(Date.now() - ms)}</small>`;
+  $("refresh").parentElement.classList.toggle("warn", Date.now() - ms > 2.5 * 3600e3);   // pipeline may be stalled
+}
+
+function notice(msg) { const n = $("notice"); n.style.display = msg ? "block" : "none"; n.textContent = msg || ""; }
+
+// ---- Loading / refreshing ----
+function setFrames(frames) {
+  S.frames = frames;
+  S.cache.clear();
+  // One color range for the whole history, so frames are comparable: 3rd-97th percentile, rounded to 5 degrees.
+  const all = [];
+  for (const f of frames) for (const r of f.rows) all.push(r[1]);
+  all.sort((a, b) => a - b);
+  let lo = all[Math.floor(all.length * 0.03)] ?? 30, hi = all[Math.ceil(all.length * 0.97) - 1] ?? 70;
+  lo = 5 * Math.floor(lo / 5); hi = 5 * Math.ceil(hi / 5);
+  if (hi - lo < 10) { lo -= 5; hi += 5; }
+  S.zmin = lo; S.zmax = hi;
+  $("slider").max = Math.max(0, frames.length - 1);
+}
+
+async function load({ keepPosition = false } = {}) {
+  const keepT = keepPosition && S.cur >= 0 && S.cur < S.frames.length - 1 ? S.frames[S.cur].t : null;
+  const d = await loadData(S.nFrames);
+  S.latestPoll = d.latestPoll && d.latestPoll[0] || null;
+  if (!S.stations.length) {
+    S.stations = d.stations; S.sIndex = new Map(d.stations.map((s, i) => [s.station_id, i]));
+    S.grid = buildGrid(S.geo, S.stations);
+  }
+  if (!d.frames.length) {
+    $("timebar").style.display = "none";
+    notice("No data yet. The ingest hasn't completed a round, so there is nothing to draw.");
+    renderRefresh(); $("showing").textContent = "—"; $("nstations").textContent = "—"; $("oldest").textContent = "—";
+    return;
+  }
+  notice("");
+  setFrames(d.frames);
+  if (!S.gd) initPlot();
+  Plotly.restyle(S.gd, { zmin: [S.zmin], zmax: [S.zmax] }, [0]);
+  Plotly.restyle(S.gd, { "marker.cmin": [S.zmin], "marker.cmax": [S.zmax] }, [3]);
+  $("timebar").style.display = "";
+  let k = d.frames.length - 1;                                           // default: the latest map
+  const wanted = Number(params.get("frame"));
+  if (!keepT && params.has("frame") && Number.isInteger(wanted)) k = wanted < 0 ? d.frames.length + wanted : wanted;
+  if (keepT) { const i = d.frames.findIndex((f) => f.t === keepT); if (i >= 0) k = i; }
+  showFrame(k);
+}
+
+// ---- Controls ----
+function stopPlay() { clearInterval(S.timer); S.timer = null; $("play").classList.remove("on"); $("play").innerHTML = "&#9654;"; }
+function startPlay() {
+  if (S.cur >= S.frames.length - 1) showFrame(0);
+  $("play").classList.add("on"); $("play").innerHTML = "&#10074;&#10074;";
+  S.timer = setInterval(() => { if (S.cur >= S.frames.length - 1) stopPlay(); else showFrame(S.cur + 1); }, 450);
+}
+let pending = null;
+$("slider").addEventListener("input", (e) => {   // coalesce fast drags into one redraw per animation frame
+  stopPlay(); pending = Number(e.target.value);
+  requestAnimationFrame(() => { if (pending !== null) { showFrame(pending); pending = null; } });
+});
+$("play").addEventListener("click", () => (S.timer ? stopPlay() : startPlay()));
+$("prev").addEventListener("click", () => { stopPlay(); showFrame(S.cur - 1); });
+$("next").addEventListener("click", () => { stopPlay(); showFrame(S.cur + 1); });
+$("range").addEventListener("change", async (e) => {
+  stopPlay(); S.nFrames = Number(e.target.value);
+  try { await load(); } catch (err) { notice("Couldn't load data: " + err.message); }
+});
+document.addEventListener("keydown", (e) => {
+  if (e.target.tagName === "SELECT") return;
+  if (e.key === "ArrowLeft") { stopPlay(); showFrame(S.cur - 1); }
+  else if (e.key === "ArrowRight") { stopPlay(); showFrame(S.cur + 1); }
+  else if (e.key === " ") { e.preventDefault(); S.timer ? stopPlay() : startPlay(); }
+});
+
+// ---- Start ----
+(async function main() {
+  try {
+    S.geo = await (await fetch("utah.json")).json();
+    await load();
+  } catch (err) {
+    notice("Couldn't load data: " + err.message);
+    console.error(err);
+  }
+  setInterval(renderCard, 60 * 1000);   // keep the "x min ago" text honest
+  setInterval(() => load({ keepPosition: true }).catch((err) => notice("Refresh failed: " + err.message)), REFRESH_MS);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+# Python
+.venv/
+__pycache__/
+
+# Local secrets / env files: never commit these
+.env
+.env.*
+
+# Supabase CLI local state (contains the linked project)
+supabase/.temp/
+supabase/.branches/
+
+# Generated, regenerable output
+map.html
+utah_counties.geojson
+
+.DS_Store
