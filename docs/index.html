@@ -8,7 +8,8 @@
   :root { --bg:#e8ecf1; --ink:#1c2430; --muted:#5b6675; --line:#dde2e9; --accent:#2f6fdd; }
   html, body { height:100%; margin:0; background:var(--bg); color:var(--ink);
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
-  #map { position:fixed; inset:0; }
+  #app { position:fixed; inset:0; display:flex; flex-direction:column; }
+  #map { flex:1 1 auto; min-height:0; position:relative; }
   .panel { position:fixed; z-index:10; box-sizing:border-box; background:rgba(255,255,255,.93);
     backdrop-filter:blur(6px); border:1px solid var(--line); border-radius:12px; box-shadow:0 4px 18px rgba(20,30,50,.10); }
   .card { top:16px; left:16px; width:310px; padding:16px 18px; }
@@ -20,22 +21,23 @@
   .stat small { display:block; font-weight:400; color:var(--muted); font-size:11.5px; }
   .warn span:last-child { color:#b4540a; }
   #notice { display:none; margin-top:8px; padding:8px 10px; border-radius:8px; background:#fff4e5; color:#8a4b08; font-size:12.5px; }
-  .timebar { left:50%; bottom:18px; transform:translateX(-50%); width:min(720px, calc(100vw - 32px));
-    padding:10px 14px; display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
-  .timebar .row { display:flex; align-items:center; gap:8px; width:100%; }
+  .timebar { flex:0 0 auto; box-sizing:border-box; padding:10px 16px; background:#fff; border-top:1px solid var(--line);
+    display:flex; align-items:center; gap:8px 16px; flex-wrap:wrap; }
+  .timebar .row { flex:1 1 380px; display:flex; align-items:center; gap:8px; min-width:0; }
   .timebar button { border:1px solid var(--line); background:#fff; border-radius:8px; height:32px; min-width:34px; cursor:pointer;
     font-size:14px; color:var(--ink); }
   .timebar button:hover { background:#f3f6fa; }
   .timebar button.on { background:var(--accent); border-color:var(--accent); color:#fff; }
   .timebar input[type=range] { flex:1; min-width:0; accent-color:var(--accent); }
-  .tlabel { font-size:13px; font-weight:550; }
+  .tlabel { font-size:13px; font-weight:550; white-space:nowrap; }
   .tlabel small { font-weight:400; color:var(--muted); }
   .timebar select { border:1px solid var(--line); border-radius:8px; height:32px; background:#fff; font-size:12.5px; color:var(--ink); }
   @media (max-width:640px) { .card { width:auto; right:16px; padding:10px 14px; } .card .sub, .card .hide-sm { display:none; } }
 </style>
 </head>
 <body>
-<div id="map"></div>
+<div id="app">
+  <div id="map"></div>
 
 <div class="panel card">
   <h1>Utah temperatures</h1>
@@ -47,7 +49,7 @@
   <div id="notice"></div>
 </div>
 
-<div class="panel timebar" id="timebar" style="display:none">
+  <div class="timebar" id="timebar" style="display:none">
   <div class="row">
     <button id="prev" title="Previous (left arrow)">&#9664;</button>
     <button id="play" title="Play / pause (space)">&#9654;</button>
@@ -60,6 +62,7 @@
     </select>
   </div>
   <div class="tlabel" id="tlabel"></div>
+  </div>
 </div>
 
 <script src="https://cdn.plot.ly/plotly-4.1.1.min.js"></script>
@@ -216,7 +219,7 @@ function initPlot() {
   const traces = [
     { type: "heatmap", x: S.grid.lons, y: S.grid.lats, z: [[null]], zmin: S.zmin, zmax: S.zmax, colorscale: COLORSCALE,
       zsmooth: false, hovertemplate: "%{z:.1f} °F (blended estimate)<extra></extra>",
-      colorbar: { orientation: "h", x: 0.985, ...(narrow ? { y: 0.15, yanchor: "bottom", len: 0.5 } : { y: 0.985, yanchor: "top", len: 0.22 }), xanchor: "right", lenmode: "fraction",
+      colorbar: { orientation: "h", x: 0.985, ...(narrow ? { y: 0.02, yanchor: "bottom", len: 0.5 } : { y: 0.985, yanchor: "top", len: 0.22 }), xanchor: "right", lenmode: "fraction",
         thickness: 10, title: { text: "Temperature (°F)", side: "top", font: { size: 12 } }, ticksuffix: "°",
         tickfont: { size: 11 }, outlinewidth: 0, bgcolor: "rgba(255,255,255,0.85)", xpad: 12, ypad: 10 } },
     lineTrace(S.geo.counties, "rgba(40,40,40,0.28)", 0.6),
@@ -301,10 +304,10 @@ async function load({ keepPosition = false } = {}) {
   }
   notice("");
   setFrames(d.frames);
+  $("timebar").style.display = "";
   if (!S.gd) initPlot();
   Plotly.restyle(S.gd, { zmin: [S.zmin], zmax: [S.zmax] }, [0]);
   Plotly.restyle(S.gd, { "marker.cmin": [S.zmin], "marker.cmax": [S.zmax] }, [3]);
-  $("timebar").style.display = "";
   let k = d.frames.length - 1;                                           // default: the latest map
   const wanted = Number(params.get("frame"));
   if (!keepT && params.has("frame") && Number.isInteger(wanted)) k = wanted < 0 ? d.frames.length + wanted : wanted;
@@ -337,6 +340,9 @@ document.addEventListener("keydown", (e) => {
   else if (e.key === "ArrowRight") { stopPlay(); showFrame(S.cur + 1); }
   else if (e.key === " ") { e.preventDefault(); S.timer ? stopPlay() : startPlay(); }
 });
+
+// Keep the plot sized to its box when the window (or the slider bar's height) changes.
+new ResizeObserver(() => { if (S.gd) Plotly.Plots.resize(S.gd); }).observe($("map"));
 
 // ---- Start ----
 (async function main() {
