@@ -5,6 +5,16 @@ them as a color-shaded map of Utah (blue = cold, red = hot) with a slider to see
 
 **Live site:** https://jrj221.github.io/cs452-data-pipeline-project/
 
+[![Watch the demo (1 min)](docs/demo-thumbnail.jpg)](https://jrj221.github.io/cs452-data-pipeline-project/demo.mp4)
+
+*Click the image to watch the full one-minute demo.*
+
+**What the video shows.** The slider covers about 24 hours of data, from Nov 12 at 11 AM to Nov 13. The first six hours of
+readings came from the initial seed run (it looks back 6 hours), and the hourly pipeline collected the rest overnight on
+its own. At the start of the recording the latest map is from about 11 AM on Nov 13 (frame 26 of 26). Refreshing the page
+at noon shows a new 12:00 PM map (frame 27 of 27) and "Most recent refresh: 12:00 PM, 0 min ago", so the pipeline fetched,
+stored and published new data without anyone touching it.
+
 ## Architecture
 
 ```mermaid
