@@ -3,8 +3,8 @@ import type { Observation } from "./nws.ts";
 
 export interface Db {
   listStationIds(): Promise<string[]>;
-  /** Start time of the most recent successful run of this same batch, or null. */
-  lastOkPollStart(batch: number, batches: number): Promise<Date | null>;
+  /** Newest stored observation time for each station (stations with no readings are absent). */
+  latestObservedAt(): Promise<Map<string, Date>>;
   /** Creates the polls row and returns its id. */
   startPoll(p: { startedAt: Date; batch: number; batches: number; stationsTotal: number }): Promise<number>;
   /** Insert rows, ignoring ones that already exist. Returns how many were actually new. */
@@ -38,13 +38,14 @@ export interface IngestResult {
 const HOUR = 3600_000;
 
 /**
- * How far back to ask NWS for observations. If the last run of this batch succeeded, start slightly
- * before it (30 min overlap) so a late or missed run is made up for. Never go back more than 24 h.
- * With no history, look back 6 h.
+ * How far back to ask NWS for ONE station's observations: from that station's newest stored reading, minus a
+ * 30 min overlap (late-arriving readings; duplicates are ignored by the database). Because this is per station,
+ * a station that failed in an earlier run is retried from where IT left off, and a missed run is made up for.
+ * Never go back more than 24 h. A station with no stored readings looks back 6 h.
  */
-export function computeSince(lastOk: Date | null, now: Date): Date {
+export function computeSince(lastObserved: Date | null, now: Date): Date {
   const earliest = new Date(now.getTime() - 24 * HOUR);
-  const wanted = lastOk ? new Date(lastOk.getTime() - 30 * 60_000) : new Date(now.getTime() - 6 * HOUR);
+  const wanted = lastObserved ? new Date(lastObserved.getTime() - 30 * 60_000) : new Date(now.getTime() - 6 * HOUR);
   return wanted < earliest ? earliest : wanted;
 }
 
@@ -64,7 +65,9 @@ export async function runIngest(deps: IngestDeps, batch: number, batches: number
 
   const startedAt = now();
   const ids = pickBatch(await db.listStationIds(), batch, batches);
-  const since = computeSince(await db.lastOkPollStart(batch, batches), startedAt);
+  const latest = await db.latestObservedAt();
+  const sinceFor = (id: string) => computeSince(latest.get(id) ?? null, startedAt);
+  const earliestSince = ids.reduce((m, id) => { const t = sinceFor(id); return t < m ? t : m; }, startedAt);
   const pollId = await db.startPoll({ startedAt, batch, batches, stationsTotal: ids.length });
 
   try {
@@ -75,7 +78,7 @@ export async function runIngest(deps: IngestDeps, batch: number, batches: number
       while (next < ids.length) {
         const id = ids[next++];
         try {
-          rows.push(...await fetchObs(id, since.toISOString()));
+          rows.push(...await fetchObs(id, sinceFor(id).toISOString()));
           ok++;
         } catch {
           failed++;
@@ -91,7 +94,7 @@ export async function runIngest(deps: IngestDeps, batch: number, batches: number
     const status = ids.length > 0 && ok === 0 ? "failed" : failed > ids.length * 0.2 ? "partial" : "ok";
     await db.finishPoll(pollId, { status, stationsOk: ok, stationsFailed: failed, newRows });
     return {
-      poll_id: pollId, batch, batches, since: since.toISOString(),
+      poll_id: pollId, batch, batches, since: earliestSince.toISOString(),
       stations_total: ids.length, stations_ok: ok, stations_failed: failed, new_rows: newRows, status,
     };
   } catch (e) {

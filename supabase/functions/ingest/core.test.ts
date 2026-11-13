@@ -6,14 +6,24 @@ import { cToF, fetchObservations, type Observation, parseObservations } from "./
 
 const NOW = new Date("2026-11-12T20:00:00Z");
 
-/** In-memory stand-in for the database: enforces the (station_id, observed_at) primary key. */
-function fakeDb(stationIds: string[], lastOk: Date | null = null) {
+/**
+ * In-memory stand-in for the database. Enforces the (station_id, observed_at) primary key, and answers
+ * latestObservedAt() from whatever has actually been stored (plus optional presets).
+ */
+function fakeDb(stationIds: string[], preset: Record<string, string> = {}) {
   const store = new Map<string, Observation>();
   const polls: any[] = [];
   const inserts: number[] = [];
   const db: Db = {
     listStationIds: async () => stationIds,
-    lastOkPollStart: async () => lastOk,
+    latestObservedAt: async () => {
+      const m = new Map<string, Date>(Object.entries(preset).map(([id, iso]) => [id, new Date(iso)]));
+      for (const o of store.values()) {
+        const t = new Date(o.observed_at);
+        if (!m.has(o.station_id) || t > m.get(o.station_id)!) m.set(o.station_id, t);
+      }
+      return m;
+    },
     startPoll: async (p) => (polls.push({ ...p, status: "running" }), polls.length),
     insertObservations: async (rows) => {
       inserts.push(rows.length);
@@ -78,27 +88,54 @@ test("pickBatch partitions the list: every station in exactly one batch", () => 
   assert.deepEqual(parts.flat().sort(), [...ids].sort());
 });
 
-test("computeSince: default 6h, 30 min overlap with last success, capped at 24h", () => {
+test("computeSince: 6h with no readings, 30 min overlap before the newest reading, capped at 24h", () => {
   assert.equal(computeSince(null, NOW).toISOString(), "2026-11-12T14:00:00.000Z");
   assert.equal(computeSince(new Date("2026-11-12T19:00:00Z"), NOW).toISOString(), "2026-11-12T18:30:00.000Z");
   assert.equal(computeSince(new Date("2026-11-01T00:00:00Z"), NOW).toISOString(), "2026-11-11T20:00:00.000Z");
 });
 
-test("runIngest: only this batch's stations are fetched, with the computed `since`", async () => {
+test("runIngest: only this batch's stations are fetched, each from ITS OWN newest reading", async () => {
   const ids = ["A", "B", "C", "D", "E"];
-  const { db, polls } = fakeDb(ids, new Date("2026-11-12T19:00:00Z"));
-  const seen: [string, string][] = [];
+  const { db } = fakeDb(ids, { B: "2026-11-12T19:00:00Z", D: "2026-11-12T19:20:00Z" }); // D newer; A, C, E never seen
+  const seen = new Map<string, string>();
   const r = await runIngest({
     db, now: () => NOW,
-    fetchObs: async (id, since) => (seen.push([id, since]), [obs(id, "2026-11-12T19:50:00.000Z")]),
+    fetchObs: async (id, since) => (seen.set(id, since), [obs(id, "2026-11-12T19:50:00.000Z")]),
   }, 1, 2); // batch 1 of 2 => B, D
-  assert.deepEqual(seen.map((s) => s[0]).sort(), ["B", "D"]);
-  assert.ok(seen.every((s) => s[1] === "2026-11-12T18:30:00.000Z"));
+  assert.deepEqual([...seen.keys()].sort(), ["B", "D"]);
+  assert.equal(seen.get("B"), "2026-11-12T18:30:00.000Z");
+  assert.equal(seen.get("D"), "2026-11-12T18:50:00.000Z");
+  assert.equal(r.since, "2026-11-12T18:30:00.000Z"); // reported "since" = the earliest of the batch
   assert.equal(r.stations_total, 2);
   assert.equal(r.new_rows, 2);
   assert.equal(r.status, "ok");
-  assert.equal(polls[0].status, "ok");
-  assert.equal(polls[0].batch, 1);
+});
+
+test("runIngest: a station with no readings looks back 6 h", async () => {
+  const { db } = fakeDb(["A"]);
+  let since = "";
+  await runIngest({ db, now: () => NOW, fetchObs: async (_id, s) => (since = s, []) }, 0, 1);
+  assert.equal(since, "2026-11-12T14:00:00.000Z");
+});
+
+test("REGRESSION: a station that failed is retried from ITS last reading, not from when the batch last succeeded", async () => {
+  const f = fakeDb(["A", "B"]);
+  // Run 1 at 20:00: A succeeds, B fails (status is still "ok": 1 of 2 failed is over 20%, so make it 'partial' or 'ok' - irrelevant now).
+  await runIngest({
+    db: f.db, now: () => NOW,
+    fetchObs: async (id) => { if (id === "B") throw new Error("NWS down"); return [obs("A", "2026-11-12T19:50:00.000Z")]; },
+  }, 0, 1);
+  assert.equal(f.store.size, 1);
+
+  // Run 2 an hour later. A resumes from its own pointer; B, which has stored nothing, goes back 6 h, not to A's 19:20.
+  const seen = new Map<string, string>();
+  const later = new Date("2026-11-12T21:00:00Z");
+  await runIngest({
+    db: f.db, now: () => later,
+    fetchObs: async (id, since) => (seen.set(id, since), [obs(id, "2026-11-12T20:55:00.000Z")]),
+  }, 0, 1);
+  assert.equal(seen.get("A"), "2026-11-12T19:20:00.000Z");
+  assert.equal(seen.get("B"), "2026-11-12T15:00:00.000Z");
 });
 
 test("runIngest: running twice with overlapping data inserts no duplicates", async () => {
@@ -113,7 +150,7 @@ test("runIngest: running twice with overlapping data inserts no duplicates", asy
 
 test("runIngest: a failing station is counted, others still stored; >20% failing => partial", async () => {
   const ids = ["A", "B", "C", "D", "E"];
-  const { db, store, polls } = fakeDb(ids);
+  const { db, store } = fakeDb(ids);
   const r = await runIngest({
     db, now: () => NOW,
     fetchObs: async (id) => { if (id === "B") throw new Error("boom"); return [obs(id, "2026-11-12T19:00:00.000Z")]; },
@@ -133,7 +170,6 @@ test("runIngest: a failing station is counted, others still stored; >20% failing
   const r3 = await runIngest({ db: all.db, now: () => NOW, fetchObs: async () => { throw new Error("down"); } }, 0, 1);
   assert.equal(r3.status, "failed");
   assert.equal(all.polls[0].status, "failed");
-  void polls;
 });
 
 test("runIngest: inserts are chunked", async () => {

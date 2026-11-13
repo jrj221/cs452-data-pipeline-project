@@ -31,11 +31,14 @@ function makeDb(): Db {
       }
     },
 
-    async lastOkPollStart(batch, batches) {
-      const r = await sb.from("polls").select("started_at").eq("batch", batch).eq("batches", batches)
-        .eq("status", "ok").order("started_at", { ascending: false }).limit(1);
-      const rows = check(r, "last poll") as { started_at: string }[];
-      return rows.length ? new Date(rows[0].started_at) : null;
+    async latestObservedAt() {
+      const latest = new Map<string, Date>();
+      for (let from = 0; ; from += 1000) { // the REST API returns at most 1000 rows per request
+        const r = await sb.rpc("latest_observation_times").range(from, from + 999);
+        const page = check(r, "latest observation times") as { station_id: string; latest: string }[];
+        for (const p of page) latest.set(p.station_id, new Date(p.latest));
+        if (page.length < 1000) return latest;
+      }
     },
 
     async startPoll(p) {
